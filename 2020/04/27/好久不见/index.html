@@ -93,7 +93,7 @@
     </nav>
     <div id="search-form-wrap">
       <form action="http://www.baidu.com/baidu" method="get" accept-charset="utf-8" class="search-form">
-        <input type="search" name="word" maxlength="20" class="search-form-input" placeholder="Search">
+        <input type="search" name="word" maxlength="20" class="search-form-input" placeholder="搜索">
         <input type="submit" value="" class="search-form-submit">
         <input name=tn type=hidden value="bds">
         <input name=cl type=hidden value="3">
@@ -135,6 +135,25 @@
     </h1>
   
 
+    
+        <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">104字</span>
+      </span>
+    </span>
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  预计阅读时长: </span>
+        <span class="post-count">1分</span>
+      </span>
+    </span>
+</div>
+     
       </header>
     
     <div class="article-entry" itemprop="articleBody">
@@ -156,7 +175,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://yoursite.com/2020/04/27/%E5%A5%BD%E4%B9%85%E4%B8%8D%E8%A7%81/" data-id="ck9jpa2660000uctsb3468dj8" class="article-share-link">Share</a>
+        <a data-url="http://yoursite.com/2020/04/27/%E5%A5%BD%E4%B9%85%E4%B8%8D%E8%A7%81/" data-id="ck9jzn56c0002q8ts75ju29ox" class="article-share-link">分享到</a>
       
 
       
@@ -183,7 +202,8 @@
   
 </article>
 
-</section>
+
+<span class="post-count">{{ wordcount(post.content) }}</span></section>
         
       </div>
       <footer id="footer">
@@ -192,6 +212,8 @@
     <div id="footer-info" class="inner">
       &copy; 2020 Cerium<br>
       Theme <a href="https://github.com/henryhuang/oishi" target="_blank">Oishi</a>, Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+<i class="fas fa-chart-area"></i><br>
+<span class="post-count">字数统计: 1.1k</span>
     </div>
   </div>
 </footer>
