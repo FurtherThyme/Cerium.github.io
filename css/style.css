@@ -607,6 +607,11 @@ body {
   -ms-filter: none;
   filter: none;
 }
+.social {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
 .nav-icon-social {
   font-family: FontAwesome;
   text-align: center;
