@@ -8,18 +8,18 @@
   <meta name="description" content="2333…鸽了这么久(2 years)终于还是在这个寒假搞好了 实际写这篇是在第二天下午了…但是贴图功能刚开发 就重写吧">
 <meta property="og:type" content="article">
 <meta property="og:title" content="好久不见">
-<meta property="og:url" content="http://yoursite.com/2020/04/27/%E5%A5%BD%E4%B9%85%E4%B8%8D%E8%A7%81/index.html">
+<meta property="og:url" content="http://pyq4ll.coding-pages.com/2020/04/27/%E5%A5%BD%E4%B9%85%E4%B8%8D%E8%A7%81/index.html">
 <meta property="og:site_name" content="PH&#39;s Blog">
 <meta property="og:description" content="2333…鸽了这么久(2 years)终于还是在这个寒假搞好了 实际写这篇是在第二天下午了…但是贴图功能刚开发 就重写吧">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://yoursite.com/2020/04/27/%E5%A5%BD%E4%B9%85%E4%B8%8D%E8%A7%81/1.png">
-<meta property="og:image" content="http://yoursite.com/2020/04/27/%E5%A5%BD%E4%B9%85%E4%B8%8D%E8%A7%81/2.png">
+<meta property="og:image" content="http://pyq4ll.coding-pages.com/2020/04/27/%E5%A5%BD%E4%B9%85%E4%B8%8D%E8%A7%81/1.png">
+<meta property="og:image" content="http://pyq4ll.coding-pages.com/2020/04/27/%E5%A5%BD%E4%B9%85%E4%B8%8D%E8%A7%81/2.png">
 <meta property="article:published_time" content="2020-04-27T15:50:00.000Z">
 <meta property="article:modified_time" content="2020-04-28T08:07:41.611Z">
 <meta property="article:author" content="Cerium">
 <meta property="article:tag" content="日记">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2020/04/27/%E5%A5%BD%E4%B9%85%E4%B8%8D%E8%A7%81/1.png">
+<meta name="twitter:image" content="http://pyq4ll.coding-pages.com/2020/04/27/%E5%A5%BD%E4%B9%85%E4%B8%8D%E8%A7%81/1.png">
   
   
     <link rel="icon" href="/_favicon.ico">
@@ -80,8 +80,6 @@
           
             <a class="main-nav-link" href="/archives">归档</a>
           
-            <a class="main-nav-link" href="/category">分类</a>
-          
             <a class="main-nav-link" href="/about">关于</a>
           
             <a class="main-nav-link" href="/diary">开发日记</a>
@@ -122,7 +120,7 @@
         <input name=tn type=hidden value="bds">
         <input name=cl type=hidden value="3">
         <input name=ct type=hidden value="2097152">
-        <input type="hidden" name="si" value="yoursite.com">
+        <input type="hidden" name="si" value="pyq4ll.coding-pages.com">
       </form>
     </div>
   </div>
@@ -133,8 +131,6 @@
         <li><a href="/">首页</a></li>
       
         <li><a href="/archives">归档</a></li>
-      
-        <li><a href="/category">分类</a></li>
       
         <li><a href="/about">关于</a></li>
       
@@ -203,7 +199,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://yoursite.com/2020/04/27/%E5%A5%BD%E4%B9%85%E4%B8%8D%E8%A7%81/" data-id="ck9l4xdid000274tsd9nx8w65" class="article-share-link">分享到</a>
+        <a data-url="http://pyq4ll.coding-pages.com/2020/04/27/%E5%A5%BD%E4%B9%85%E4%B8%8D%E8%A7%81/" data-id="ck9nr36kh0006iwts0mk1du56" class="article-share-link">分享到</a>
       
 
       
@@ -240,7 +236,24 @@
       &copy; 2020 Cerium<br>
       Theme <a href="https://github.com/henryhuang/oishi" target="_blank">Oishi</a>, Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
 <i class="fas fa-chart-area"></i><br>
-<span class="post-count">字数统计: 1.5k</span>
+<span class="post-count">字数统计: 1.8k</span><br>
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+    var now = new Date(); 
+    function createtime() { 
+        var grt= new Date("04/27/2020 23:45:00");//在此处修改你的建站时间
+        now.setTime(now.getTime()+250); 
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+        document.getElementById("timeDate").innerHTML = "本站已运行 "+dnum+" 天 "; 
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+    } 
+setInterval("createtime()",250);
+</script>
     </div>
   </div>
 </footer>
@@ -251,8 +264,6 @@
     <a href="/" class="mobile-nav-link">首页</a>
   
     <a href="/archives" class="mobile-nav-link">归档</a>
-  
-    <a href="/category" class="mobile-nav-link">分类</a>
   
     <a href="/about" class="mobile-nav-link">关于</a>
   

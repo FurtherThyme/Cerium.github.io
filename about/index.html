@@ -8,7 +8,7 @@
   <meta name="description" content="一位默默无名的山顶洞人 爱好有 追番 PR 天文等 也不知道为什么要搞这个BLOG 明明只有这是各位大佬OIer才会玩的东西 大佬都在写题解  我也不知道写什么呢 偶尔写写日记和笔记吧 Welcome！ 友链：（先写写zc的链接吧，毕竟是人家拉我进的坑，之后会单独开发一个页面的 不知道什么时候 zcmimi: https:&#x2F;&#x2F;blog.zcmimi.top&#x2F;">
 <meta property="og:type" content="website">
 <meta property="og:title" content="关于">
-<meta property="og:url" content="http://yoursite.com/about/index.html">
+<meta property="og:url" content="http://pyq4ll.coding-pages.com/about/index.html">
 <meta property="og:site_name" content="PH&#39;s Blog">
 <meta property="og:description" content="一位默默无名的山顶洞人 爱好有 追番 PR 天文等 也不知道为什么要搞这个BLOG 明明只有这是各位大佬OIer才会玩的东西 大佬都在写题解  我也不知道写什么呢 偶尔写写日记和笔记吧 Welcome！ 友链：（先写写zc的链接吧，毕竟是人家拉我进的坑，之后会单独开发一个页面的 不知道什么时候 zcmimi: https:&#x2F;&#x2F;blog.zcmimi.top&#x2F;">
 <meta property="og:locale" content="zh_CN">
@@ -76,8 +76,6 @@
           
             <a class="main-nav-link" href="/archives">归档</a>
           
-            <a class="main-nav-link" href="/category">分类</a>
-          
             <a class="main-nav-link" href="/about">关于</a>
           
             <a class="main-nav-link" href="/diary">开发日记</a>
@@ -118,7 +116,7 @@
         <input name=tn type=hidden value="bds">
         <input name=cl type=hidden value="3">
         <input name=ct type=hidden value="2097152">
-        <input type="hidden" name="si" value="yoursite.com">
+        <input type="hidden" name="si" value="pyq4ll.coding-pages.com">
       </form>
     </div>
   </div>
@@ -129,8 +127,6 @@
         <li><a href="/">首页</a></li>
       
         <li><a href="/archives">归档</a></li>
-      
-        <li><a href="/category">分类</a></li>
       
         <li><a href="/about">关于</a></li>
       
@@ -195,7 +191,7 @@
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://yoursite.com/about/index.html" data-id="ck9l4xdic000174tsehph0tz2" class="article-share-link">分享到</a>
+        <a data-url="http://pyq4ll.coding-pages.com/about/index.html" data-id="ck9nr36ki0007iwts88563yi0" class="article-share-link">分享到</a>
       
 
       
@@ -216,7 +212,24 @@
       &copy; 2020 Cerium<br>
       Theme <a href="https://github.com/henryhuang/oishi" target="_blank">Oishi</a>, Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
 <i class="fas fa-chart-area"></i><br>
-<span class="post-count">字数统计: 1.5k</span>
+<span class="post-count">字数统计: 1.8k</span><br>
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+    var now = new Date(); 
+    function createtime() { 
+        var grt= new Date("04/27/2020 23:45:00");//在此处修改你的建站时间
+        now.setTime(now.getTime()+250); 
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+        document.getElementById("timeDate").innerHTML = "本站已运行 "+dnum+" 天 "; 
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+    } 
+setInterval("createtime()",250);
+</script>
     </div>
   </div>
 </footer>
@@ -227,8 +240,6 @@
     <a href="/" class="mobile-nav-link">首页</a>
   
     <a href="/archives" class="mobile-nav-link">归档</a>
-  
-    <a href="/category" class="mobile-nav-link">分类</a>
   
     <a href="/about" class="mobile-nav-link">关于</a>
   

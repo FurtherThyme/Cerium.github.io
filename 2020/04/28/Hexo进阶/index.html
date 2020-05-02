@@ -8,12 +8,12 @@
   <meta name="description" content="前言：在编辑代码的时候，切记不要使用系统自带的记事本 应使用如Notepad++之类的程序 ​            若已经用记事本编辑 要另存为 修改文件编码格式为UTF-8 否则中文会出现乱码 插入图片1 把主页配置文件_config.yml 里的post_asset_folder:这个选项设置为true 2.安装插件:npm install https:&#x2F;&#x2F;github.com&#x2F;CodeFa">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo进阶">
-<meta property="og:url" content="http://yoursite.com/2020/04/28/Hexo%E8%BF%9B%E9%98%B6/index.html">
+<meta property="og:url" content="http://pyq4ll.coding-pages.com/2020/04/28/Hexo%E8%BF%9B%E9%98%B6/index.html">
 <meta property="og:site_name" content="PH&#39;s Blog">
 <meta property="og:description" content="前言：在编辑代码的时候，切记不要使用系统自带的记事本 应使用如Notepad++之类的程序 ​            若已经用记事本编辑 要另存为 修改文件编码格式为UTF-8 否则中文会出现乱码 插入图片1 把主页配置文件_config.yml 里的post_asset_folder:这个选项设置为true 2.安装插件:npm install https:&#x2F;&#x2F;github.com&#x2F;CodeFa">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-04-28T04:05:29.000Z">
-<meta property="article:modified_time" content="2020-04-28T14:38:38.036Z">
+<meta property="article:modified_time" content="2020-05-02T16:11:02.142Z">
 <meta property="article:author" content="Cerium">
 <meta property="article:tag" content="笔记">
 <meta name="twitter:card" content="summary">
@@ -77,8 +77,6 @@
           
             <a class="main-nav-link" href="/archives">归档</a>
           
-            <a class="main-nav-link" href="/category">分类</a>
-          
             <a class="main-nav-link" href="/about">关于</a>
           
             <a class="main-nav-link" href="/diary">开发日记</a>
@@ -119,7 +117,7 @@
         <input name=tn type=hidden value="bds">
         <input name=cl type=hidden value="3">
         <input name=ct type=hidden value="2097152">
-        <input type="hidden" name="si" value="yoursite.com">
+        <input type="hidden" name="si" value="pyq4ll.coding-pages.com">
       </form>
     </div>
   </div>
@@ -130,8 +128,6 @@
         <li><a href="/">首页</a></li>
       
         <li><a href="/archives">归档</a></li>
-      
-        <li><a href="/category">分类</a></li>
       
         <li><a href="/about">关于</a></li>
       
@@ -148,6 +144,10 @@
   <time datetime="2020-04-28T04:05:29.000Z" itemprop="datePublished">2020-04-28</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -166,7 +166,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">1.1k字</span>
+        <span class="post-count">1.4k字</span>
       </span>
     </span>
     <span class="post-time">
@@ -174,7 +174,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  预计阅读时长: </span>
-        <span class="post-count">5分</span>
+        <span class="post-count">7分</span>
       </span>
     </span>
 </div>
@@ -222,12 +222,15 @@
 <h4 id="在博客底部显示总字数"><a href="#在博客底部显示总字数" class="headerlink" title="在博客底部显示总字数"></a>在博客底部显示总字数</h4><p>找到themes\hexo-theme\layout\ _partial\foot.ejs</p>
 <p>在合适的位置新建一段代码</p>
 <p><code>&lt;span class=&quot;post-count&quot;&gt;字数统计: &lt;%= totalcount(site) %&gt;&lt;/span&gt;</code></p>
+<h1 id="添加网站运行时间"><a href="#添加网站运行时间" class="headerlink" title="添加网站运行时间"></a>添加网站运行时间</h1><p>在\themes\hexo-theme\layout_partial\footer.ejs中加入以下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;span id&#x3D;&quot;timeDate&quot;&gt;载入天数...&lt;&#x2F;span&gt;&lt;span id&#x3D;&quot;times&quot;&gt;载入时分秒...&lt;&#x2F;span&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    var now &#x3D; new Date(); </span><br><span class="line">    function createtime() &#123; </span><br><span class="line">        var grt&#x3D; new Date(&quot;08&#x2F;10&#x2F;2018 17:38:00&quot;);&#x2F;&#x2F;在此处修改你的建站时间</span><br><span class="line">        now.setTime(now.getTime()+250); </span><br><span class="line">        days &#x3D; (now - grt ) &#x2F; 1000 &#x2F; 60 &#x2F; 60 &#x2F; 24; dnum &#x3D; Math.floor(days); </span><br><span class="line">        hours &#x3D; (now - grt ) &#x2F; 1000 &#x2F; 60 &#x2F; 60 - (24 * dnum); hnum &#x3D; Math.floor(hours); </span><br><span class="line">        if(String(hnum).length &#x3D;&#x3D;1 )&#123;hnum &#x3D; &quot;0&quot; + hnum;&#125; minutes &#x3D; (now - grt ) &#x2F; 1000 &#x2F;60 - (24 * 60 * dnum) - (60 * hnum); </span><br><span class="line">        mnum &#x3D; Math.floor(minutes); if(String(mnum).length &#x3D;&#x3D;1 )&#123;mnum &#x3D; &quot;0&quot; + mnum;&#125; </span><br><span class="line">        seconds &#x3D; (now - grt ) &#x2F; 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); </span><br><span class="line">        snum &#x3D; Math.round(seconds); if(String(snum).length &#x3D;&#x3D;1 )&#123;snum &#x3D; &quot;0&quot; + snum;&#125; </span><br><span class="line">        document.getElementById(&quot;timeDate&quot;).innerHTML &#x3D; &quot;本站已安全运行 &quot;+dnum+&quot; 天 &quot;; </span><br><span class="line">        document.getElementById(&quot;times&quot;).innerHTML &#x3D; hnum + &quot; 小时 &quot; + mnum + &quot; 分 &quot; + snum + &quot; 秒&quot;; </span><br><span class="line">    &#125; </span><br><span class="line">setInterval(&quot;createtime()&quot;,250);</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://yoursite.com/2020/04/28/Hexo%E8%BF%9B%E9%98%B6/" data-id="ck9l4xdi8000074tsah5hcvwo" class="article-share-link">分享到</a>
+        <a data-url="http://pyq4ll.coding-pages.com/2020/04/28/Hexo%E8%BF%9B%E9%98%B6/" data-id="ck9nr36k80000iwts42gi8zxb" class="article-share-link">分享到</a>
       
 
       
@@ -238,15 +241,6 @@
   
     
 <nav id="article-nav">
-  
-    <a href="/2020/04/29/test/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          test
-        
-      </div>
-    </a>
   
   
     <a href="/2020/04/28/%E7%BC%A9%E6%94%BE%E6%8B%89%E9%95%9C/" id="article-nav-older" class="article-nav-link-wrap">
@@ -269,7 +263,24 @@
       &copy; 2020 Cerium<br>
       Theme <a href="https://github.com/henryhuang/oishi" target="_blank">Oishi</a>, Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
 <i class="fas fa-chart-area"></i><br>
-<span class="post-count">字数统计: 1.5k</span>
+<span class="post-count">字数统计: 1.8k</span><br>
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+    var now = new Date(); 
+    function createtime() { 
+        var grt= new Date("04/27/2020 23:45:00");//在此处修改你的建站时间
+        now.setTime(now.getTime()+250); 
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+        document.getElementById("timeDate").innerHTML = "本站已运行 "+dnum+" 天 "; 
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+    } 
+setInterval("createtime()",250);
+</script>
     </div>
   </div>
 </footer>
@@ -280,8 +291,6 @@
     <a href="/" class="mobile-nav-link">首页</a>
   
     <a href="/archives" class="mobile-nav-link">归档</a>
-  
-    <a href="/category" class="mobile-nav-link">分类</a>
   
     <a href="/about" class="mobile-nav-link">关于</a>
   
