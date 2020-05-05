@@ -125,7 +125,7 @@ body,
 }
 body {
   background: #fff;
-  font: 14px/1.9em "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 16px/1.9em "Helvetica Neue", Helvetica, Arial, sans-serif;
   -webkit-text-size-adjust: 100%;
 }
 .outer {
@@ -615,9 +615,9 @@ body {
 .nav-icon-social {
   font-family: FontAwesome;
   text-align: center;
-  font-size: 14px;
-  width: 14px;
-  height: 14px;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
   right: 5px;
   top: 8px;
   padding: 10px 23px;
@@ -627,9 +627,9 @@ body {
 .nav-icon {
   font-family: FontAwesome;
   text-align: center;
-  font-size: 14px;
-  width: 14px;
-  height: 14px;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
   padding: 20px 15px;
   position: relative;
   cursor: pointer;
@@ -844,6 +844,40 @@ a.article-title:hover {
   zoom: 1;
   color: #555;
   padding: 0 20px;
+/*
+$article-gallery-ctrl
+  position: absolute
+  top: 0
+  height: 100%
+  width: 60px
+  color: #fff
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.3)
+  opacity: 0.3
+  transition: opacity 0.2s
+  cursor: pointer
+  &:hover
+    opacity: 0.8
+  &:before
+    font-size: 30px
+    font-family: font-icon
+    position: absolute
+    top: 50%
+    margin-top: @font-size * -0.5
+
+.article-gallery-prev
+  @extend $article-gallery-ctrl
+  left: 0
+  &:before
+    content: "\f053"
+    left: 15px
+
+.article-gallery-next
+  @extend $article-gallery-ctrl
+  right: 0
+  &:before
+    content: "\f054"
+    right: 15px*/
+/*toc*/
 }
 .article-entry:before,
 .article-entry:after {
@@ -880,68 +914,69 @@ a.article-title:hover {
   text-decoration: none;
 }
 .article-entry a:hover {
+  color: #5953f3;
   text-decoration: underline;
 }
-.article-entry ul,
-.article-entry ol,
-.article-entry dl {
+.article-entry a ul,
+.article-entry a ol,
+.article-entry a dl {
   margin-top: 1.9em;
   margin-bottom: 1.9em;
 }
-.article-entry img,
-.article-entry video {
+.article-entry a img,
+.article-entry a video {
   max-width: 100%;
   height: auto;
   display: block;
   margin: auto;
 }
-.article-entry iframe {
+.article-entry a iframe {
   border: none;
 }
-.article-entry table {
+.article-entry a table {
   width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
 }
-.article-entry th {
+.article-entry a th {
   font-weight: bold;
   border-bottom: 3px solid #ddd;
   padding-bottom: 0.5em;
 }
-.article-entry td {
+.article-entry a td {
   border-bottom: 1px solid #ddd;
   padding: 10px 0;
 }
-.article-entry blockquote {
+.article-entry a blockquote {
   font-family: "Droid Serif", Georgia, Serif;
   margin: 1.9em 0;
   padding: 0 0.8em;
   border-left: 4px solid #ddd;
   color: #777;
 }
-.article-entry blockquote footer {
-  font-size: 14px;
+.article-entry a blockquote footer {
+  font-size: 16px;
   margin: 1.9em 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-.article-entry blockquote footer cite:before {
+.article-entry a blockquote footer cite:before {
   content: "—";
   padding: 0 0.5em;
 }
-.article-entry .pullquote {
+.article-entry a .pullquote {
   text-align: left;
   width: 45%;
   margin: 0;
 }
-.article-entry .pullquote.left {
+.article-entry a .pullquote.left {
   margin-left: 0.5em;
   margin-right: 1em;
 }
-.article-entry .pullquote.right {
+.article-entry a .pullquote.right {
   margin-right: 0.5em;
   margin-left: 1em;
 }
-.article-entry .caption {
+.article-entry a .caption {
   color: #999;
   display: block;
   font-size: 0.9em;
@@ -949,15 +984,15 @@ a.article-title:hover {
   position: relative;
   text-align: center;
 }
-.article-entry .video-container {
+.article-entry a .video-container {
   position: relative;
   padding-top: 56.25%;
   height: 0;
   overflow: hidden;
 }
-.article-entry .video-container iframe,
-.article-entry .video-container object,
-.article-entry .video-container embed {
+.article-entry a .video-container iframe,
+.article-entry a .video-container object,
+.article-entry a .video-container embed {
   position: absolute;
   top: 0;
   left: 0;
@@ -965,7 +1000,7 @@ a.article-title:hover {
   height: 100%;
   margin-top: 0;
 }
-.article-more-link a {
+.article-entry .article-more-link a {
   display: inline-block;
   line-height: 1em;
   padding: 6px 15px;
@@ -975,76 +1010,76 @@ a.article-title:hover {
   text-shadow: 0 1px #fff;
   text-decoration: none;
 }
-.article-more-link a:hover {
+.article-entry .article-more-link a:hover {
   background: #258fb8;
   color: #fff;
   text-decoration: none;
   text-shadow: 0 1px #1e7293;
 }
-.article-footer {
+.article-entry .article-footer {
   zoom: 1;
   font-size: 0.85em;
   line-height: 1.9em;
   padding-top: 1.9em;
   margin: 0 20px 20px;
 }
-.article-footer:before,
-.article-footer:after {
+.article-entry .article-footer:before,
+.article-entry .article-footer:after {
   content: "";
   display: table;
 }
-.article-footer:after {
+.article-entry .article-footer:after {
   clear: both;
 }
-.article-footer a {
+.article-entry .article-footer a {
   color: #999;
   text-decoration: none;
 }
-.article-footer a:hover {
+.article-entry .article-footer a:hover {
   color: #555;
 }
-.article-tag-list-item {
+.article-entry .article-tag-list-item {
   float: left;
   margin-right: 10px;
 }
-.article-tag-list-link:before {
+.article-entry .article-tag-list-link:before {
   content: "#";
 }
-.article-comment-link {
+.article-entry .article-comment-link {
   float: right;
 }
-.article-comment-link:before {
+.article-entry .article-comment-link:before {
   content: "\f075";
   font-family: FontAwesome;
   padding-right: 8px;
 }
-.article-share-link {
+.article-entry .article-share-link {
   cursor: pointer;
   float: right;
   margin-left: 20px;
 }
-.article-share-link:before {
+.article-entry .article-share-link:before {
   content: "\f064";
   font-family: FontAwesome;
   padding-right: 6px;
 }
-#article-nav {
+.article-entry #article-nav {
   zoom: 1;
   position: relative;
 }
-#article-nav:before,
-#article-nav:after {
+.article-entry #article-nav:before,
+.article-entry #article-nav:after {
   content: "";
   display: table;
 }
-#article-nav:after {
+.article-entry #article-nav:after {
   clear: both;
 }
 @media screen and (min-width: 768px) {
-  #article-nav {
+  .article-entry #article-nav {
     margin: 50px 0;
   }
-  #article-nav:before {
+  .article-entry #article-nav:before {
     width: 8px;
     height: 8px;
     position: absolute;
@@ -1059,7 +1094,7 @@ a.article-title:hover {
     box-shadow: 0 1px 2px #fff;
   }
 }
-.article-nav-link-wrap {
+.article-entry .article-nav-link-wrap {
   text-decoration: none;
   text-shadow: 0 1px #fff;
   color: #999;
@@ -1070,45 +1105,45 @@ a.article-title:hover {
   text-align: center;
   display: block;
 }
-.article-nav-link-wrap:hover {
+.article-entry .article-nav-link-wrap:hover {
   color: #555;
 }
 @media screen and (min-width: 768px) {
-  .article-nav-link-wrap {
+  .article-entry .article-nav-link-wrap {
     width: 50%;
     margin-top: 0;
   }
 }
 @media screen and (min-width: 768px) {
-  #article-nav-newer {
+  .article-entry #article-nav-newer {
     float: left;
     text-align: right;
     padding-right: 20px;
   }
 }
 @media screen and (min-width: 768px) {
-  #article-nav-older {
+  .article-entry #article-nav-older {
     float: right;
     text-align: left;
     padding-left: 20px;
   }
 }
-.article-nav-caption {
+.article-entry .article-nav-caption {
   text-transform: uppercase;
   letter-spacing: 2px;
   color: #ddd;
   line-height: 1em;
   font-weight: bold;
 }
-#article-nav-newer .article-nav-caption {
+#article-nav-newer .article-entry .article-nav-caption {
   margin-right: -2px;
 }
-.article-nav-title {
+.article-entry .article-nav-title {
   font-size: 0.85em;
   line-height: 1.9em;
   margin-top: 0.5em;
 }
-.article-share-box {
+.article-entry .article-share-box {
   position: absolute;
   display: none;
   background: #fff;
@@ -1119,10 +1154,10 @@ a.article-title:hover {
   overflow: hidden;
   z-index: 1;
 }
-.article-share-box.on {
+.article-entry .article-share-box.on {
   display: block;
 }
-.article-share-input {
+.article-entry .article-share-input {
   width: 100%;
   background: none;
   -webkit-box-sizing: border-box;
@@ -1137,27 +1172,27 @@ a.article-title:hover {
   height: 36px;
   line-height: 36px;
 }
-.article-share-links {
+.article-entry .article-share-links {
   zoom: 1;
   background: #fff;
 }
-.article-share-links:before,
-.article-share-links:after {
+.article-entry .article-share-links:before,
+.article-entry .article-share-links:after {
   content: "";
   display: table;
 }
-.article-share-links:after {
+.article-entry .article-share-links:after {
   clear: both;
 }
-.article-share-weibo,
-.article-share-weixin,
-.article-share-qq,
-.article-share-renren,
-.article-share-more,
-.article-share-twitter,
-.article-share-facebook,
-.article-share-pinterest,
-.article-share-google {
+.article-entry .article-share-weibo,
+.article-entry .article-share-weixin,
+.article-entry .article-share-qq,
+.article-entry .article-share-renren,
+.article-entry .article-share-more,
+.article-entry .article-share-twitter,
+.article-entry .article-share-facebook,
+.article-entry .article-share-pinterest,
+.article-entry .article-share-google {
   width: 50px;
   height: 50px;
   display: block;
@@ -1167,15 +1202,15 @@ a.article-title:hover {
   text-shadow: 0 1px #fff;
   cursor: pointer;
 }
-.article-share-weibo:before,
-.article-share-weixin:before,
-.article-share-qq:before,
-.article-share-renren:before,
-.article-share-more:before,
-.article-share-twitter:before,
-.article-share-facebook:before,
-.article-share-pinterest:before,
-.article-share-google:before {
+.article-entry .article-share-weibo:before,
+.article-entry .article-share-weixin:before,
+.article-entry .article-share-qq:before,
+.article-entry .article-share-renren:before,
+.article-entry .article-share-more:before,
+.article-entry .article-share-twitter:before,
+.article-entry .article-share-facebook:before,
+.article-entry .article-share-pinterest:before,
+.article-entry .article-share-google:before {
   font-size: 20px;
   font-family: FontAwesome;
   width: 20px;
@@ -1187,105 +1222,105 @@ a.article-title:hover {
   margin-left: -10px;
   text-align: center;
 }
-.article-share-weibo:hover,
-.article-share-weixin:hover,
-.article-share-qq:hover,
-.article-share-renren:hover,
-.article-share-more:hover,
-.article-share-twitter:hover,
-.article-share-facebook:hover,
-.article-share-pinterest:hover,
-.article-share-google:hover {
+.article-entry .article-share-weibo:hover,
+.article-entry .article-share-weixin:hover,
+.article-entry .article-share-qq:hover,
+.article-entry .article-share-renren:hover,
+.article-entry .article-share-more:hover,
+.article-entry .article-share-twitter:hover,
+.article-entry .article-share-facebook:hover,
+.article-entry .article-share-pinterest:hover,
+.article-entry .article-share-google:hover {
   color: #fff;
 }
-.article-share-weibo:before {
+.article-entry .article-share-weibo:before {
   content: "\f18a";
 }
-.article-share-weibo:hover {
+.article-entry .article-share-weibo:hover {
   background: #d44137;
   text-shadow: 0 1px #b02f26;
 }
-.article-share-weixin:before {
+.article-entry .article-share-weixin:before {
   content: "\f1d7";
 }
-.article-share-weixin:hover {
+.article-entry .article-share-weixin:hover {
   background: #38ad5a;
   text-shadow: 0 1px #2d8a48;
 }
-.article-share-qq:before {
+.article-entry .article-share-qq:before {
   content: "\f1d6";
 }
-.article-share-qq:hover {
+.article-entry .article-share-qq:hover {
   background: #39b2e2;
   text-shadow: 0 1px #1d96c5;
 }
-.article-share-renren:before {
+.article-entry .article-share-renren:before {
   content: "\f18b";
 }
-.article-share-renren:hover {
+.article-entry .article-share-renren:hover {
   background: #105ba3;
   text-shadow: 0 1px #0d4982;
 }
-.article-share-more:before {
+.article-entry .article-share-more:before {
   content: "\f067";
 }
-.article-share-more:hover {
+.article-entry .article-share-more:hover {
   background: #333;
   text-shadow: 0 1px #292929;
 }
-.article-share-twitter:before {
+.article-entry .article-share-twitter:before {
   content: "\f099";
 }
-.article-share-twitter:hover {
+.article-entry .article-share-twitter:hover {
   background: #00aced;
   text-shadow: 0 1px #008abe;
 }
-.article-share-facebook:before {
+.article-entry .article-share-facebook:before {
   content: "\f09a";
 }
-.article-share-facebook:hover {
+.article-entry .article-share-facebook:hover {
   background: #3b5998;
   text-shadow: 0 1px #2f477a;
 }
-.article-share-pinterest:before {
+.article-entry .article-share-pinterest:before {
   content: "\f0d2";
 }
-.article-share-pinterest:hover {
+.article-entry .article-share-pinterest:hover {
   background: #cb2027;
   text-shadow: 0 1px #a21a1f;
 }
-.article-share-google:before {
+.article-entry .article-share-google:before {
   content: "\f0d5";
 }
-.article-share-google:hover {
+.article-entry .article-share-google:hover {
   background: #dd4b39;
   text-shadow: 0 1px #be3221;
 }
-.article-gallery {
+.article-entry .article-gallery {
   background: #000;
   position: relative;
 }
-.article-gallery-photos {
+.article-entry .article-gallery-photos {
   position: relative;
   overflow: hidden;
 }
-.article-gallery-img {
+.article-entry .article-gallery-img {
   display: none;
   max-width: 100%;
 }
-.article-gallery-img:first-child {
+.article-entry .article-gallery-img:first-child {
   display: block;
 }
-.article-gallery-img.loaded {
+.article-entry .article-gallery-img.loaded {
   position: absolute;
   display: block;
 }
-.article-gallery-img img {
+.article-entry .article-gallery-img img {
   display: block;
   max-width: 100%;
   margin: 0 auto;
 }
-.toc-article {
+.article-entry .toc-article {
   background: #fff;
   border: 1px solid #bbb;
   border-radius: 10px;
@@ -1293,23 +1328,24 @@ a.article-title:hover {
   padding: 1.2em 1em 0 1em;
   max-width: 28%;
 }
-.toc-title {
+.article-entry .toc-title {
   font-size: 120%;
+  color: #5953f3;
 }
-#toc {
+.article-entry #toc {
   line-height: 1em;
   font-size: 0.9em;
   float: right;
 }
-#toc .toc {
+.article-entry #toc .toc {
   padding: 0;
   margin: 1em;
   line-height: 1.8em;
 }
-#toc .toc li {
+.article-entry #toc .toc li {
   list-style-type: none;
 }
-#toc .toc-child {
+.article-entry #toc .toc-child {
   margin-left: 1em;
 }
 #comments {
@@ -1475,7 +1511,7 @@ a.article-title:hover {
   border-width: 1px 0;
   overflow: auto;
   color: #f8f8f2;
-  line-height: 26.599999999999998px;
+  line-height: 30.4px;
 }
 .article-entry .highlight .gutter pre,
 .article-entry .gist .gist-file .gist-data .line-numbers {
@@ -1536,7 +1572,7 @@ a.article-title:hover {
   padding-right: 20px;
 }
 .article-entry .highlight .line {
-  height: 26.599999999999998px;
+  height: 30.4px;
 }
 .article-entry .gist {
   margin: 0 -20px;
