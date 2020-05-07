@@ -1313,9 +1313,6 @@ a.article-title:hover {
 #toc .toc-child {
   margin-left: 1em;
 }
-#toc a:hover {
-  color: #5953f3;
-}
 #comments {
   background: #fff;
   -webkit-box-shadow: 1px 2px 3px #ddd;
