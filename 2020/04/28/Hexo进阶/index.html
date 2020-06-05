@@ -1,176 +1,104 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  
-  <title>Hexo进阶 | PH&#39;s Blog</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前言：在编辑代码的时候，切记不要使用系统自带的记事本 应使用如Notepad++之类的程序 ​            若已经用记事本编辑 要另存为 修改文件编码格式为UTF-8 否则中文会出现乱码 插入图片1 把站点配置文件_config.yml 里的post_asset_folder:这个选项设置为true 2.安装插件:npm install https:&#x2F;&#x2F;github.com&#x2F;Code">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Hexo进阶">
-<meta property="og:url" content="http://pyq4ll.coding-pages.com/2020/04/28/Hexo%E8%BF%9B%E9%98%B6/index.html">
-<meta property="og:site_name" content="PH&#39;s Blog">
-<meta property="og:description" content="前言：在编辑代码的时候，切记不要使用系统自带的记事本 应使用如Notepad++之类的程序 ​            若已经用记事本编辑 要另存为 修改文件编码格式为UTF-8 否则中文会出现乱码 插入图片1 把站点配置文件_config.yml 里的post_asset_folder:这个选项设置为true 2.安装插件:npm install https:&#x2F;&#x2F;github.com&#x2F;Code">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://pyq4ll.coding-pages.com/2020/04/28/Hexo%E8%BF%9B%E9%98%B6/TIM%E6%88%AA%E5%9B%BE20200508120944.png">
-<meta property="article:published_time" content="2020-04-28T04:05:29.000Z">
-<meta property="article:modified_time" content="2020-05-08T04:19:21.470Z">
-<meta property="article:author" content="Cerium">
-<meta property="article:tag" content="笔记">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://pyq4ll.coding-pages.com/2020/04/28/Hexo%E8%BF%9B%E9%98%B6/TIM%E6%88%AA%E5%9B%BE20200508120944.png">
-  
-  
-    <link rel="icon" href="images/favicon.ico">
-  
-  <link type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css" rel="stylesheet">
-  
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <title>PH&#39;s Blog</title>
+    
 <link rel="stylesheet" href="/css/style.css">
 
-  
-<link rel="stylesheet" href="/css/scrollUp/image.css">
+    
+<link rel="stylesheet" href="/css/gitment.css">
 
-  <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
-  
+    <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_859455_eaq7v6w8ktj.css">
 <meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="\assets\css\APlayer.min.css" class="aplayer-style-marker">
 <script src="\assets\js\APlayer.min.js" class="aplayer-script-marker"></script>
 <script src="\assets\js\Meting.min.js" class="meting-script-marker"></script>
 </head>
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <div class="logo">
-        <img src="/logo.png" alt="Profile Picture">
-      </div>
-      <div id="title">PH's Blog</div>
-      
-       <ul class="my-socials">
-  
-  <li>
-  	<a href="https://space.bilibili.com/107814866" title="Bilibili" target="_blank">
-  		<img src="/images/social/Bilibili.png" class="social"></i>
-  	</a>
-  </li>
-  
-  <li>
-  	<a href="https://music.163.com/#/user/home?id=134800690" title="网易云音乐" target="_blank">
-  		<img src="/images/social/网易云音乐.png" class="social"></i>
-  	</a>
-  </li>
-  
- 
- <li>
-   	<a href="mailto:http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=2462658016@qq.com" target="_blank" title="Email Me">
-  		<img src="/images/social/Email.png" class="social"></i>
-  	</a>
- </li>
- 
-</ul>
-    </div>
-  </div>
-  <div id="header-inner" class="">
-    <nav id="main-nav">
-      <a id="main-nav-toggle" class="nav-icon"></a>
-      <!--
-        
-          
-            <a class="main-nav-link" href="/">首页</a>
-          
-            <a class="main-nav-link" href="/archives">归档</a>
-          
-            <a class="main-nav-link" href="/friends">友链</a>
-          
-            <a class="main-nav-link" href="/about">关于</a>
-          
-            <a class="main-nav-link" href="/diary">开发日记</a>
-          
-        
-      -->
-    </nav>
-    <nav id="title-nav" style="display:none">
-      <a href="/">PH&#39;s Blog</a>
-      <img src="/logo.png" alt="Profile Picture">
-      <!--
-      <span id="title-nav-socials">
-        
-          <a href="https://space.bilibili.com/107814866" class="Bilibili" target="_blank">
-            <i class="fa fa-Bilibili"></i>
-          </a>
-        
-          <a href="https://music.163.com/#/user/home?id=134800690" class="网易云音乐" target="_blank">
-            <i class="fa fa-网易云音乐"></i>
-          </a>
-        
-       
-          <a href="mailto:http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=2462658016@qq.com" class="email" target="_blank" title="Email Me">
-            <i class="fa fa-envelope"></i>
-          </a>
-       
-     </span>
-      -->
-    </nav>
-    <nav id="sub-nav">   
-      
-      <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-    </nav>
-    <div id="search-form-wrap">
-      <form action="http://www.baidu.com/baidu" method="get" accept-charset="utf-8" class="search-form">
-        <input type="search" name="word" maxlength="20" class="search-form-input" placeholder="搜索">
-        <input type="submit" value="" class="search-form-submit">
-        <input name=tn type=hidden value="bds">
-        <input name=cl type=hidden value="3">
-        <input name=ct type=hidden value="2097152">
-        <input type="hidden" name="si" value="pyq4ll.coding-pages.com">
-      </form>
-    </div>
-  </div>
-  <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">首页</a>
-        
-          <a class="main-nav-link" href="/archives">归档</a>
-        
-          <a class="main-nav-link" href="/friends">友链</a>
-        
-          <a class="main-nav-link" href="/about">关于</a>
-        
-          <a class="main-nav-link" href="/diary">开发日记</a>
-        
-      </nav>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main"><article id="post-Hexo进阶" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/04/28/Hexo%E8%BF%9B%E9%98%B6/" class="article-date">
-  <time datetime="2020-04-28T04:05:29.000Z" itemprop="datePublished">2020-04-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      Hexo进阶
-    </h1>
-  
+<header class="header">
+    <div class="header-inner">
+        <div class="header-title">
 
-    
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-    <div id="aplayer-IqMBblPJ" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="1302118070" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div>
+        </div>
+        <nav class="header-nav">
+            
+            <a href="/" class="header-nav-link" >
+                首页
+            </a>
+            
+
+            
+            <a href="/archives" class="header-nav-link">
+                归档
+            </a>
+            
+
+            
+            <a href="/tags" class="header-nav-link">
+                标签
+            </a>
+            
+
+            
+        </nav>
+    </div>
+</header>
+<header class="mobile-header">
+    <div class="mobile-nav">
+        <div class="mobile-nav-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="mobile-nav-title">
+            <a href="/" class="mobile-nav-title-link">Cerium's Blog</a>
+        </div>
+
+    </div>
+    <nav class="mobile-menu">
+        <ul class="mobile-menu-list">
+            <li class="mobile-menu-item">
+                <i class="iconfont icon-home"></i>
+                <a href="/" class="mobile-nav-link">首页</a>
+            </li>
+            <li class="mobile-menu-item">
+                <i class="iconfont icon-archive"></i>
+                <a href="/archives" class="mobile-nav-link">归档</a>
+            </li>
+            <li class="mobile-menu-item">
+                <i class="iconfont icon-tag"></i>
+                <a href="/tags" class="mobile-nav-link">标签</a>
+            </li>
+            <li class="mobile-menu-item">
+                <i class="iconfont icon-about"></i>
+                <a href="/about/" class="mobile-nav-link">关于</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<div class="main">
+    <div class="content-inner">
+        <div class="posts">
+    <article class="post-whole">
+        <div class="post-title">
+            <h2 class="title">Hexo进阶</h2>
+            <div class="post-meta">
+                <span class="post-time">2020-04-28</span>
+                
+                <span class="post-visit"> 阅读次数：<span id="busuanzi_value_page_pv"></span></span>
+            </div>
+        </div>
+        <div class="post-toc" id="post-toc">
+    <strong class="post-toc-title">目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#插入图片"><span class="toc-text">插入图片</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#添加字数统计和阅读时长"><span class="toc-text">添加字数统计和阅读时长</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#在博客底部显示总字数"><span class="toc-text">在博客底部显示总字数</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#添加网站运行时间"><span class="toc-text">添加网站运行时间</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#添加文章目录"><span class="toc-text">添加文章目录</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#设置目录样式"><span class="toc-text">设置目录样式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#启用目录"><span class="toc-text">启用目录</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#链接样式优化"><span class="toc-text">链接样式优化</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#修改主题字体"><span class="toc-text">修改主题字体</span></a></li></ol>
+    <div class="back-to-top" id="back-to-top">
+        <a href="javascript:void(0);">回到顶部</a>
+    </div>
+</div>
+        <div class="post-content">
+            
+    <div id="aplayer-pMKMCjKA" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="1302118070" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div>
 
 <p>前言：在编辑代码的时候，切记不要使用系统自带的记事本 应使用如Notepad++之类的程序</p>
 <p>​            若已经用记事本编辑 要另存为 修改文件编码格式为UTF-8 否则中文会出现乱码</p>
@@ -261,107 +189,68 @@
 <p><del>（为什么我产生了有人看我博客的错觉）</del></p>
 <p>我是把box-shadow删掉了 并且略微调大了<code>font-size</code></p>
 
-      
-    </div>
-    <footer class="article-footer">
-      
-        <a data-url="http://pyq4ll.coding-pages.com/2020/04/28/Hexo%E8%BF%9B%E9%98%B6/" data-id="ckaao30qy000258ts9s9m493z" class="article-share-link">分享到</a>
-      
-
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag">笔记</a></li></ul>
-
-    </footer>
-  </div>
-  
-    
-<nav id="article-nav">
-  
-  
-    <a href="/2020/04/28/%E7%BC%A9%E6%94%BE%E6%8B%89%E9%95%9C/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">缩放拉镜</div>
-    </a>
-  
-</nav>
-
-  
-</article>
-
-</section>
+        </div>
         
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-	<center>Theme <a href="https://github.com/henryhuang/oishi" target="_blank">Oishi</a>, Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></center>
-<i class="fas fa-chart-area"></i>
-    <center>Copyright&copy; 2020 Cerium</center>
-	<center><span class="post-count">字数统计: 2.6k</span>&#160
-<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
-<script>
-    var now = new Date(); 
-    function createtime() { 
-        var grt= new Date("04/27/2020 23:45:00");//在此处修改你的建站时间
-        now.setTime(now.getTime()+250); 
-        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
-        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
-        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
-        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
-        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
-        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
-        document.getElementById("timeDate").innerHTML = "本站已运行 "+dnum+" 天 "; 
-        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
-    } 
-setInterval("createtime()",250);
-</script></center>
+        <div class="post-tag">
+            
+            <a class="tag" href="/tags/%E7%AC%94%E8%AE%B0/" title="笔记">笔记</a>
+            
+        </div>
+        
+    </article>
+</div>
+<div class="paginator">
+    
+        
+            <a class="prev" href="/2020/06/05/%E8%BF%91%E5%86%B5/">
+                <i class="iconfont icon-prev"></i>
+                <span class="nav-default">近况</span>
+                <span class="nav-mobile">上一篇</span>
+            </a>
+        
+        
+            <a class="next" href="/2020/04/28/%E7%BC%A9%E6%94%BE%E6%8B%89%E9%95%9C/">
+                <span class="nav-default">缩放拉镜</span>
+                <span class="nav-mobile">下一篇</span>
+                <i class="iconfont icon-next"></i>
+            </a>
+        
+    
+</div>
+<div id="comment-container"></div>
     </div>
-  </div>
-</footer>
-    </div>
-    <!--
-      <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">首页</a>
-  
-    <a href="/archives" class="mobile-nav-link">归档</a>
-  
-    <a href="/friends" class="mobile-nav-link">友链</a>
-  
-    <a href="/about" class="mobile-nav-link">关于</a>
-  
-    <a href="/diary" class="mobile-nav-link">开发日记</a>
-  
-</nav>
-    -->
+</div>
+<footer class="footer-social">
     
 
-<!-- 百度分享 start -->
+    
 
-<!-- 百度分享 end -->
+    
 
-<script src="//cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
-
-
-
-
-<script src="/js/jquery.scrollUp.min.js"></script>
-
-
-<script src="/js/jquery.transform.js"></script>
-
-
-<script src="/js/menu.js"></script>
-
-
-
-<script src="/js/script.js"></script>
-
-
-<script src="/js/scrollUp.js"></script>
-
-
-  </div>
+    <div class="footer-copyright">
+        <p class="time-line">
+            &copy;
+            
+            
+            2020
+            &nbsp;<i class="iconfont icon-heart"></i>&nbsp;
+            <a target="_blank" href="https://github.com/iJinxin">Cerium</a>
+        </p>
+        <p class="theme-info">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme -
+            <a target="_blank" href="https://github.com/iJinxin/hexo-theme-sky">Sky</a>
+        </p>
+    </div>
+</footer>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="/js/index.js"></script>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+    
+
+</script>
 </html>
