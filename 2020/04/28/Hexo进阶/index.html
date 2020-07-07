@@ -59,10 +59,8 @@
     <meta name="description" itemprop="description" content="
 
 前言：在编辑代码的时候，切记不要使用系统自带的记事本 应使用如Notepad++之类的程序
-​            若已经用记事本编辑 要另存为 修改文件编码格式为UTF-8 否则中文会出现乱码
-插入图片1 把站点配置文件_config.yml 里的post_asset_folder:这个选项设置为true
-2.安装插件:npm install https://github.com/CodeFalling/hexo-asset-image – save">
-    <meta name="keywords" content=",笔记">
+​            若已经用记事本编辑 要另存为 修改文件编码格式为UTF-8 否则中文会出现乱码">
+    <meta name="keywords" content=",Hexo">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -245,14 +243,12 @@
     <meta property="og:description" content="
 
 前言：在编辑代码的时候，切记不要使用系统自带的记事本 应使用如Notepad++之类的程序
-​            若已经用记事本编辑 要另存为 修改文件编码格式为UTF-8 否则中文会出现乱码
-插入图片1 把站点配置文件_config.yml 里的post_asset_folder:这个选项设置为true
-2.安装插件:npm install https://github.com/CodeFalling/hexo-asset-image – save">
-    <meta property="og:article:tag" content="笔记"> 
+​            若已经用记事本编辑 要另存为 修改文件编码格式为UTF-8 否则中文会出现乱码">
+    <meta property="og:article:tag" content="Hexo"> 
 
     
         <meta property="article:published_time" content="Tue Apr 28 2020 12:05:29 GMT+0800">
-        <meta property="article:modified_time" content="Sat Jun 06 2020 00:16:55 GMT+0800">
+        <meta property="article:modified_time" content="Tue Jul 07 2020 19:58:47 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -275,7 +271,7 @@
     "mainEntityOfPage": "http://pyq4ll.coding-pages.com/2020/04/28/Hexo%E8%BF%9B%E9%98%B6/index.html",
     "headline": "Hexo进阶",
     "datePublished": "Tue Apr 28 2020 12:05:29 GMT+0800",
-    "dateModified": "Sat Jun 06 2020 00:16:55 GMT+0800",
+    "dateModified": "Tue Jul 07 2020 19:58:47 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Cerium",
@@ -293,13 +289,11 @@
             "url": "/img/favicon.png"
         }
     },
-    "keywords": ",笔记",
+    "keywords": ",Hexo",
     "description": "
 
 前言：在编辑代码的时候，切记不要使用系统自带的记事本 应使用如Notepad++之类的程序
-​            若已经用记事本编辑 要另存为 修改文件编码格式为UTF-8 否则中文会出现乱码
-插入图片1 把站点配置文件_config.yml 里的post_asset_folder:这个选项设置为true
-2.安装插件:npm install https://github.com/CodeFalling/hexo-asset-image – save",
+​            若已经用记事本编辑 要另存为 修改文件编码格式为UTF-8 否则中文会出现乱码",
 }
 </script>
 
@@ -386,17 +380,8 @@
                 
     <!-- Paradox Post Header -->
     
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-            <script type="text/ls-javascript" id="post-thumbnail-script">
-    var randomNum = Math.floor(Math.random() * 19 + 1);
-
-    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
-    $('.post_thumbnail-random').addClass('lazy');
-</script>
-
-        
+        <!-- Custom Thumbnail -->
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(https://s1.ax1x.com/2020/07/07/UAUCPH.md.png)">
     
             <p class="article-headline-p">
                 Hexo进阶
@@ -433,6 +418,18 @@
 
     <!-- Qrcode -->
     
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAAC3klEQVR42u3aW27iUBAEUPa/6cwCEKSq26PA9fEXH8j2uUip9OPxc8vrgY2NjY2NjY2Njf2R7Ed8PX//+T7Pn1895f3d3t+zfWdsbGzsO7B/+dP/9pGveAk4ObL8O+9d2NjY2Hdg56+YBEYeQvlTZu+MjY2Njf2+8MjLjw0AGxsbG/t/BNgmqPbhh42NjY29atAsxgObp/xZLw0bGxv749ntoPcTPv/BfBsbGxv7I9mbq42xTTFzwdtiY2NjH8pu2/rJsk7bkNoXOdE6ETY2Nvah7DZgkljaLHQm75P8AHVuY2NjY38t+6oly7b8aIcB+Uh4ON/GxsbG/lp2O0BN4qddoMwLlbZ8wsbGxr4bu77RqORov3PZWj82Njb2oewclg8GNgE2O/rocLGxsbEPZc9GAi21Xcdp21vDUgQbGxv7CHa75thi2jFDW/AUS0XY2NjYh7KTf+tXsVEWOZvC45dSBxsbG/tQ9qz82ARbHmPJYRXRi42NjX0oO3npPFTahlEeafUwoO2lYWNjY385Oy9L2tjbsK89XGxsbOxT2W3Lvm0PtSs7s1HxsALDxsbGPoidt3Vm6zX7dZ9NWYKNjY19NjuJhNkIIYmZ5LntuLfupWFjY2Mfym6LkNnIIS+HZsMMbGxs7Duwh2EQH9NslWe/7lP00rCxsbEPYrdDgvx1N6Pl9rCGUxFsbGzsQ9nJTWdBlcdhMipYlSLY2NjYR7Dz4MnHq7MmVN48qhePsLGxsW/GvqyVU7afZjEW/QzY2NjYh7Lbq12jadd08nir14mwsbGxD2Xv46EOkjLq2vB7eQdsbGzso9l5eORj3byt3z5x1rrCxsbGvgN7swS5gW2eclkvDRsbG/tm7HyEkITf7Ljb8TM2NjY2djsMSF40HyfnzSNsbGzsO7PbsiFv02/aSZcdNDY2NvbR7LZlk7TsNyVNcgT1T4WNjY19KPs+FzY2NjY2NjY2NvbHXP8ARi00NnRi6tMAAAAASUVORK5CYII=">
+    
+</ul>
+
+    
 
     <!-- Tags (bookmark) -->
     
@@ -442,7 +439,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag">笔记</a>
+        <a class="post_tag-link" href="/tags/Hexo/" rel="tag">Hexo</a>
     </ul>
     
 
@@ -494,14 +491,14 @@
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
         
-    <div id="aplayer-XLBUayvw" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="1302118070" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div>
+    <div id="aplayer-awRgjtUd" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="1302118070" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div>
 
 <p>前言：在编辑代码的时候，切记不要使用系统自带的记事本 应使用如Notepad++之类的程序</p>
 <p>​            若已经用记事本编辑 要另存为 修改文件编码格式为UTF-8 否则中文会出现乱码</p>
+<a id="more"></a>
+
 <h1 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a><strong>插入图片</strong></h1><p>1 把站点配置文件_config.yml 里的post_asset_folder:这个选项设置为true</p>
 <p>2.安装插件:npm install <a href="https://github.com/CodeFalling/hexo-asset-image" target="_blank" rel="noopener">https://github.com/CodeFalling/hexo-asset-image</a> – save</p>
- <a id="more"></a>
-
 <p>3.运行hexo n “XXXXXX”,生成XXXXX.md博文时就会在/source/_posts目录下生成XXXXXX的文件夹，将你想在XXXXX博文中插入的照片放置到这个同名文件夹中即可，图片的命名随意。</p>
 <p>4.添加图片:在想添加的位置写入<a href="图片名字.图片格式"></a>,例如<code>![](XXX.jpg)</code></p>
 <p><strong>WARN：新版本的hexo-assrt-image 代码有问题！需修改</strong></p>
@@ -728,7 +725,7 @@
             </a>
             <ul class="dropdown-menu">
                 <li>
-                
+                <a class="sidebar_archives-link" href="/categories/%E7%94%9F%E6%B4%BB/">生活<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记<span class="sidebar_archives-count">3</span></a>
             </ul>
         </li>
         
@@ -737,17 +734,37 @@
     <!-- Pages  -->
     
         <li>
-            <a href="/about" title="About">
+            <a href="/about" title="关于我">
                 
                     <i class="material-icons sidebar-material-icons">person</i>
                 
-                About
+                关于我
             </a>
         </li>
         
     
+        <li>
+            <a href="/links" title="友链">
+                
+                    <i class="material-icons sidebar-material-icons">link</i>
+                
+                友链
+            </a>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
 
     <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">6</span>
+            </a>
+        </li>
+        
     
 </ul>
 
