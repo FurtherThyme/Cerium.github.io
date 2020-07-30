@@ -46,7 +46,7 @@
     
     <title>
         
-            缩放拉镜 | 
+            timeline | 
         
         PH&#39;s Blog
     </title>
@@ -56,11 +56,8 @@
     <link rel="icon" href="/img/favicon.png">
 
     <meta name="format-detection" content="telephone=no"/>
-    <meta name="description" itemprop="description" content="———有道的拷贝
-
-1.基础缩放
-利用两个素材的缩放来连接">
-    <meta name="keywords" content=",Pr">
+    <meta name="description" itemprop="description" content="">
+    <meta name="keywords" content="">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -221,7 +218,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="PH&#39;s Blog">
-    <meta name="msapplication-starturl" content="http://pyq4ll.coding-pages.com/2020/04/28/%E7%BC%A9%E6%94%BE%E6%8B%89%E9%95%9C/">
+    <meta name="msapplication-starturl" content="http://pyq4ll.coding-pages.com/timeline/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="PH&#39;s Blog">
@@ -236,19 +233,13 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://pyq4ll.coding-pages.com/2020/04/28/%E7%BC%A9%E6%94%BE%E6%8B%89%E9%95%9C/">
+    <meta property="og:url" content="http://pyq4ll.coding-pages.com/timeline/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="缩放拉镜 | PH&#39;s Blog">
+    <meta property="og:title" content="timeline | PH&#39;s Blog">
     <meta property="og:image" content="/img/favicon.png">
-    <meta property="og:description" content="———有道的拷贝
-
-1.基础缩放
-利用两个素材的缩放来连接">
-    <meta property="og:article:tag" content="Pr"> 
-
+    <meta property="og:description" content="">
     
-        <meta property="article:published_time" content="Tue Apr 28 2020 11:55:04 GMT+0800">
-        <meta property="article:modified_time" content="Wed Jul 08 2020 12:20:11 GMT+0800">
+
     
 
     <!-- The Twitter Card protocol -->
@@ -256,46 +247,13 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://pyq4ll.coding-pages.com/2020/04/28/%E7%BC%A9%E6%94%BE%E6%8B%89%E9%95%9C/index.html" />
+        <link rel="canonical" href="http://pyq4ll.coding-pages.com/timeline/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
-
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "mainEntityOfPage": "http://pyq4ll.coding-pages.com/2020/04/28/%E7%BC%A9%E6%94%BE%E6%8B%89%E9%95%9C/index.html",
-    "headline": "缩放拉镜",
-    "datePublished": "Tue Apr 28 2020 11:55:04 GMT+0800",
-    "dateModified": "Wed Jul 08 2020 12:20:11 GMT+0800",
-    "author": {
-        "@type": "Person",
-        "name": "Cerium",
-        "image": {
-            "@type": "ImageObject",
-            "url": "/img/avatar.png"
-        },
-        "description": "最是难解少年梦，黄粱一转又付空"
-    },
-    "publisher": {
-        "@type": "Organization",
-        "name": "PH&#39;s Blog",
-        "logo": {
-            "@type":"ImageObject",
-            "url": "/img/favicon.png"
-        }
-    },
-    "keywords": ",Pr",
-    "description": "———有道的拷贝
-
-1.基础缩放
-利用两个素材的缩放来连接",
-}
-</script>
 
 
     
@@ -331,218 +289,604 @@
 
                     <!-- Post TOC -->
 
-    
-    <!-- Back Button -->
-    <!--
-    <div class="material-back" id="backhome-div" tabindex="0">
-        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
-           href="#" onclick="window.history.back();return false;"
-           target="_self"
-           role="button"
-           data-upgraded=",MaterialButton,MaterialRipple">
-            <i class="material-icons" role="presentation">arrow_back</i>
-            <span class="mdl-button__ripple-container">
-                <span class="mdl-ripple"></span>
-            </span>
-        </a>
-    </div>
-    -->
-
-
-    <!-- Left aligned menu below button -->
-    
-    
-
-
-
 
 <!-- Layouts -->
 
-    <!-- Post Module -->
-    <div class="material-post_container">
+    <!-- Single Timeline Page -->
+    <style>
+	.md-container {
+		width: 90%;
+		max-width: 1170px;
+		margin: 0 auto;
+	}
+	.md-container::after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+	#md-timeline {
+		position: relative;
+		padding: 2em 0;
+		margin-top: 2em;
+		margin-bottom: 2em;
+	}
+	@media screen and (max-device-width:480px){
+		#md-timeline {
+			margin-top: 6em;
+		}
+	}
+	#md-timeline::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 18px;
+		height: 100%;
+		width: 2px;
+		background: #d7e4ed;
+	}
+	.md-timeline-title {
+		font-size: 20px;
+		line-height: 24px;
+	}
+	.md-timeline-content a {
+		text-decoration: none;
+	}
+	.md-timeline-info {
+		height: 20px;
+		width: 100%;
+		margin: 10px 0px;
+	}
+	.md-timeline-info-span {
+		float: right;
+		margin-right: 10px;
+		text-align: right;
+	}
+	.md-timeline-excerpt {
+	    	clear: right; 
+	}
+	@media only screen and (min-width: 1170px) {
+		#md-timeline {
+			margin-top: 3em;
+			margin-bottom: 3em;
+		}
+		#md-timeline::before {
+			left: 50%;
+			margin-left: -2px;
+		}
+	}
+	.md-timeline-block {
+		position: relative;
+		margin: 2em 0;
+	}
+	.md-timeline-block:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+	.md-timeline-block:first-child {
+		margin-top: 0;
+	}
+	.md-timeline-block:last-child {
+		margin-bottom: 0;
+	}
+	@media only screen and (min-width: 1170px) {
+		.md-timeline-block {
+			margin: 4em 0;
+		}
+		.md-timeline-block:first-child {
+			margin-top: 0;
+		}
+		.md-timeline-block:last-child {
+			margin-bottom: 0;
+		}
+	}
+	.md-timeline-date {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 60px;
+		height: 40px;
+		border-radius: box-shadow: 0 0 0 4px white, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+	}
+	.md-timeline-date.blue {
+		background: #0D395F;
+		-webkit-box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.75);
+		-moz-box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.75);
+		box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.75);
+	}
+	@media only screen and (min-width: 1170px) {
+		.md-timeline-date {
+			width: 60px;
+			height: 60px;
+			left: 50%;
+			margin-left: -30px;
+			/* Force Hardware Acceleration in WebKit */
+			-webkit-transform: translateZ(0);
+			-webkit-backface-visibility: hidden;
+		}
+		.cssanimations .md-timeline-date.is-hidden {
+			visibility: hidden;
+		}
+		.cssanimations .md-timeline-date.bounce-in {
+			visibility: visible;
+			-webkit-animation: md-bounce-1 0.6s;
+			-moz-animation: md-bounce-1 0.6s;
+			animation: md-bounce-1 0.6s;
+		}
+	}
+	@-webkit-keyframes md-bounce-1 {
+		0% {
+			opacity: 0;
+			-webkit-transform: scale(0.5);
+		}
+		60% {
+			opacity: 1;
+			-webkit-transform: scale(1.2);
+		}
+		100% {
+			-webkit-transform: scale(1);
+		}
+	}
+	@-moz-keyframes md-bounce-1 {
+		0% {
+			opacity: 0;
+			-moz-transform: scale(0.5);
+		}
+		60% {
+			opacity: 1;
+			-moz-transform: scale(1.2);
+		}
+		100% {
+			-moz-transform: scale(1);
+		}
+	}
+	@keyframes md-bounce-1 {
+		0% {
+			opacity: 0;
+			-webkit-transform: scale(0.5);
+			-moz-transform: scale(0.5);
+			-ms-transform: scale(0.5);
+			-o-transform: scale(0.5);
+			transform: scale(0.5);
+		}
+		60% {
+			opacity: 1;
+			-webkit-transform: scale(1.2);
+			-moz-transform: scale(1.2);
+			-ms-transform: scale(1.2);
+			-o-transform: scale(1.2);
+			transform: scale(1.2);
+		}
+		100% {
+			-webkit-transform: scale(1);
+			-moz-transform: scale(1);
+			-ms-transform: scale(1);
+			-o-transform: scale(1);
+			transform: scale(1);
+		}
+	}
+	.md-timeline-content {
+		position: relative;
+		margin-left: 60px;
+		background: white;
+		padding: 1em;
+		-webkit-box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.75);
+		-moz-box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.75);
+		box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.75);
+	}
+	.md-timeline-content:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+	.md-timeline-content h2 {
+		color: #303e49;
+	}
+	.md-timeline-content p, .md-timeline-content .md-read-more, .md-timeline-content .md-date {
+		font-size: 13px;
+		font-size: 0.8125rem;
+	}
+	.md-timeline-content .md-read-more, .md-timeline-content .md-date {
+		display: inline-block;
+	}
+	.md-timeline-content p {
+		margin: 1em 0;
+		line-height: 1.6;
+	}
+	.md-timeline-content .md-read-more {
+		float: right;
+		padding: .8em 1em;
+		background: #acb7c0;
+		color: white;
+		border-radius: 0.25em;
+	}
+	.md-date {
+		color: white;
+		text-align: center;
+	}
+	.no-touch .md-timeline-content .md-read-more:hover {
+		background-color: #bac4cb;
+	}
+	.md-timeline-content::before {
+		content: '';
+		position: absolute;
+		top: 16px;
+		right: 100%;
+		height: 0;
+		width: 0;
+		border: 7px solid transparent;
+		border-right: 7px solid white;
+	}
+	@media only screen and (min-width: 768px) {
+		.md-timeline-content h2 {
+			font-size: 20px;
+			font-size: 1.25rem;
+		}
+		.md-timeline-content p {
+			font-size: 16px;
+			font-size: 1rem;
+		}
+		.md-timeline-content .md-read-more {
+			font-size: 14px;
+			font-size: 0.875rem;
+		}
+	}
+	@media only screen and (min-width: 1170px) {
+		.md-date {
+			text-align: center;
+			margin-top: 10px;
+			line-height: 20px;
+		}
+		.md-timeline-content {
+			margin-left: 0;
+			padding: 1.6em;
+			width: 45%;
+		}
+		.md-timeline-content::before {
+			top: 24px;
+			left: 100%;
+			border-color: transparent;
+			border-left-color: white;
+		}
+		.md-timeline-content .md-read-more {
+			float: left;
+		}
+		.md-timeline-block:nth-child(even) .md-timeline-content {
+			float: right;
+		}
+		.md-timeline-block:nth-child(even) .md-timeline-content::before {
+			top: 24px;
+			left: auto;
+			right: 100%;
+			border-color: transparent;
+			border-right-color: white;
+		}
+		.md-timeline-block:nth-child(even) .md-timeline-content .md-read-more {
+			float: right;
+		}
+		.cssanimations .md-timeline-content.is-hidden {
+			visibility: hidden;
+		}
+		.cssanimations .md-timeline-content.bounce-in {
+			visibility: visible;
+			-webkit-animation: md-bounce-2 0.6s;
+			-moz-animation: md-bounce-2 0.6s;
+			animation: md-bounce-2 0.6s;
+		}
+	}
+	@media only screen and (min-width: 1170px) {
+		/* inverse bounce effect on even content blocks */
+		.cssanimations .md-timeline-block:nth-child(even) .md-timeline-content.bounce-in {
+			-webkit-animation: md-bounce-2-inverse 0.6s;
+			-moz-animation: md-bounce-2-inverse 0.6s;
+			animation: md-bounce-2-inverse 0.6s;
+		}
+	}
+	@-webkit-keyframes md-bounce-2 {
+		0% {
+			opacity: 0;
+			-webkit-transform: translateX(-100px);
+		}
+		60% {
+			opacity: 1;
+			-webkit-transform: translateX(20px);
+		}
+		100% {
+			-webkit-transform: translateX(0);
+		}
+	}
+	@-moz-keyframes md-bounce-2 {
+		0% {
+			opacity: 0;
+			-moz-transform: translateX(-100px);
+		}
+		60% {
+			opacity: 1;
+			-moz-transform: translateX(20px);
+		}
+		100% {
+			-moz-transform: translateX(0);
+		}
+	}
+	@keyframes md-bounce-2 {
+		0% {
+			opacity: 0;
+			-webkit-transform: translateX(-100px);
+			-moz-transform: translateX(-100px);
+			-ms-transform: translateX(-100px);
+			-o-transform: translateX(-100px);
+			transform: translateX(-100px);
+		}
+		60% {
+			opacity: 1;
+			-webkit-transform: translateX(20px);
+			-moz-transform: translateX(20px);
+			-ms-transform: translateX(20px);
+			-o-transform: translateX(20px);
+			transform: translateX(20px);
+		}
+		100% {
+			-webkit-transform: translateX(0);
+			-moz-transform: translateX(0);
+			-ms-transform: translateX(0);
+			-o-transform: translateX(0);
+			transform: translateX(0);
+		}
+	}
+	@-webkit-keyframes md-bounce-2-inverse {
+		0% {
+			opacity: 0;
+			-webkit-transform: translateX(100px);
+		}
+		60% {
+			opacity: 1;
+			-webkit-transform: translateX(-20px);
+		}
+		100% {
+			-webkit-transform: translateX(0);
+		}
+	}
+	@-moz-keyframes md-bounce-2-inverse {
+		0% {
+			opacity: 0;
+			-moz-transform: translateX(100px);
+		}
+		60% {
+			opacity: 1;
+			-moz-transform: translateX(-20px);
+		}
+		100% {
+			-moz-transform: translateX(0);
+		}
+	}
+	@keyframes md-bounce-2-inverse {
+		0% {
+			opacity: 0;
+			-webkit-transform: translateX(100px);
+			-moz-transform: translateX(100px);
+			-ms-transform: translateX(100px);
+			-o-transform: translateX(100px);
+			transform: translateX(100px);
+		}
+		60% {
+			opacity: 1;
+			-webkit-transform: translateX(-20px);
+			-moz-transform: translateX(-20px);
+			-ms-transform: translateX(-20px);
+			-o-transform: translateX(-20px);
+			transform: translateX(-20px);
+		}
+		100% {
+			-webkit-transform: translateX(0);
+			-moz-transform: translateX(0);
+			-ms-transform: translateX(0);
+			-o-transform: translateX(0);
+			transform: translateX(0);
+		}
+	}
+</style>
 
-        <div class="material-post mdl-grid">
-            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+<section id="md-timeline" class="md-container">
+   	   		
+			<div class="md-timeline-block">
+                		<div class="md-timeline-date blue">
+                   			<div class="md-date">7月 10 2020</div>
+                		</div>
 
-                <!-- Post Header(Thumbnail & Title) -->
-                
-    <!-- Paradox Post Header -->
-    
-        <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(https://s1.ax1x.com/2020/07/08/UEOQT1.md.png)">
-    
-            <p class="article-headline-p">
-                缩放拉镜
-            </p>
-        </div>
+                		<div class="md-timeline-content">
+                    			<div class="md-timeline-title"><a href="/2020/07/10/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AAAMV/">我的第一个AMV</a></div>
+					<div class="md-timeline-info">
+						<span class="md-timeline-info-span">Categories:
+							<a class="category-link" href="/categories/AMV/">AMV</a>
+						</span>
+						<span class="md-timeline-info-span">Tags:
+							<a class="tag-link" href="/tags/AMV/" rel="tag">AMV</a>
+						</span>
+						
+					</div>
+					<p class="md-timeline-excerpt">
+						
+							
+						...
+					</p>
+                    		</div>
+			</div>	
+   		
+			<div class="md-timeline-block">
+                		<div class="md-timeline-date blue">
+                   			<div class="md-date">6月 22 2020</div>
+                		</div>
 
+                		<div class="md-timeline-content">
+                    			<div class="md-timeline-title"><a href="/2020/06/22/%E5%8E%A6%E9%97%A8%E6%B8%B8%E8%AE%B0/">厦门游记</a></div>
+					<div class="md-timeline-info">
+						<span class="md-timeline-info-span">Categories:
+							<a class="category-link" href="/categories/%E7%94%9F%E6%B4%BB/">生活</a>
+						</span>
+						<span class="md-timeline-info-span">Tags:
+							<a class="tag-link" href="/tags/%E6%B8%B8%E8%AE%B0/" rel="tag">游记</a>, <a class="tag-link" href="/tags/%E7%94%9F%E6%B4%BB/" rel="tag">生活</a>
+						</span>
+						
+					</div>
+					<p class="md-timeline-excerpt">
+						
+							
 
+——想了好久还是这首吧 最近没怎么发掘了
+						...
+					</p>
+                    		</div>
+			</div>	
+   		
+			<div class="md-timeline-block">
+                		<div class="md-timeline-date blue">
+                   			<div class="md-date">6月 07 2020</div>
+                		</div>
 
-
-
-                
-                    <!-- Paradox Post Info -->
-                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
-
-    <!-- Author Avatar -->
-    <div id="author-avatar">
-        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
-    </div>
-    <!-- Author Name & Date -->
-    <div>
-        <strong>Cerium</strong>
-        <span>4月 28, 2020</span>
-    </div>
-
-    <div class="section-spacer"></div>
-
-    <!-- Favorite -->
-    <!--
-        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
-            <i class="material-icons" role="presentation">favorite</i>
-            <span class="visuallyhidden">favorites</span>
-        </button>
-    -->
-
-    <!-- Qrcode -->
-    
-        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-    <i class="material-icons" role="presentation">devices other</i>
-    <span class="visuallyhidden">devices other</span>
-</button>
-<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
-    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
-    
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ4AAAEOCAAAAABd2qZ5AAADhElEQVR42u3ay27bQBAEQP//TyfXAEKk7pldSQaKJ4OWKW5d2vP4+eP65/pBgAMHDhw4cODAgQPHF3P8xNfj5x+fk3zm+Scf/yq/354FBw4cOHDc43gRRU8P9r/DbI7dPnl1Fhw4cODAcY0jf5X2zvMgnD05D/vnZDhw4MCB47Mcs9dq/2ofojhw4MCB4/dy5GRtE3D/Mw4cOHDg+CxHG2Btgbe5H60mvL9XigMHDhw4Di00fPPPH9jvwIEDBw4c62tfnj1/Zt40PHAWHDhw4MBxlKNdX8tpkrWG/f2oSNv0SnHgwIEDR8mxGSbN2nb5Il1epOHAgQMHju/haJuAsxJu1mqcBXb+jThw4MCB4wZHvkaQFHttbG+WKjb/KODAgQMHjnscm8bfvnhry602RIdjJxw4cODAseDIj50vpe3biPnqwyz+ceDAgQPHezjyBYXnh8+B2rbj2ZISBw4cOHDc4MiHPZsB1awk25SIxboDDhw4cOC4xtGuLOQF3ouoWzQBN2tzOHDgwIHjNkdeXOV32mjcLCjgwIEDB45v5phFXRvYp4qxdmCGAwcOHDjucewDchZy7SE3zcfVfgcOHDhw4Cg5kkDKY2y2JNG2F9tS8AUQDhw4cOA4ytE24/I43Kw+5MVhO9CK/u/AgQMHDhwXFhra12rXHaLiKoDOLxw4cODA8X6OpDmYD5/aAqwt5PaNRRw4cODAcYNjVhrlQ502mPcFWx3wOHDgwIHjGse9r0yOncdqPmQ60CvFgQMHDhyLOUvSXEuahrPSLmdqlyFWzUEcOHDgwFFynIrYWcglb9KuOxwo4XDgwIEDx4IjXxrIUfLozZ/TjqnyxiUOHDhw4DjLkbfw2mIvL8zakM5LzegzOHDgwIHjKMfs8JuFhk2cb2IVBw4cOHC8h6N9xXatYVa8nYr8A6tyOHDgwIFjMWeZNQTbNYgZU0uQDKVw4MCBA8cNjvbKm4DtasLhNYX823HgwIEDx1GONq7yEM0PlrT5NuirsRMOHDhw4BhxJOGa/zZpzOVtxzxEj03hcODAgQPHIY58YHOvmdguvc2egAMHDhw4fhfHrLhqQ3qzBoEDBw4cOL6HIymxZqVde7xTYyocOHDgwHGPo20Obkq4WSTncVucDgcOHDhwXOBoFxo2w6QEt71fFGw39jtw4MCBA4cLBw4cOHDgwIEDBw4c33v9BVurQ5R29/bBAAAAAElFTkSuQmCC">
-    
-</ul>
-
-    
-
-    <!-- Tags (bookmark) -->
-    
-    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-        <i class="material-icons" role="presentation">bookmark</i>
-        <span class="visuallyhidden">bookmark</span>
-    </button>
-    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
-        <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/Pr/" rel="tag">Pr</a>
-    </ul>
-    
-
-    <!-- Share -->
-    
-        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-    <i class="material-icons" role="presentation">share</i>
-    <span class="visuallyhidden">share</span>
-</button>
-<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
-    
-
-    
-
-    <!-- Share Weibo -->
-    
-
-    <!-- Share Twitter -->
-    
-
-    <!-- Share Facebook -->
-    
-
-    <!-- Share Google+ -->
-    
-
-    <!-- Share LinkedIn -->
-    
-
-    <!-- Share QQ -->
-    
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=PH&#39;s Blog&title=缩放拉镜&summary=&pics=http://pyq4ll.coding-pages.com/img/favicon.png&url=http://pyq4ll.coding-pages.com/2020/04/28/%E7%BC%A9%E6%94%BE%E6%8B%89%E9%95%9C/index.html" target="_blank">
-            <li class="mdl-menu__item">
-                分享到 QQ
-            </li>
-        </a>
-    
-
-    <!-- Share Telegram -->
-    
-</ul>
-
-    
-</div>
-
-                
-
-                <!-- Post Content -->
-                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
-    
-        <p>———有道的拷贝</p>
-<hr>
-<p><strong>1.基础缩放</strong></p>
-<p>利用两个素材的缩放来连接</p>
- <a id="more"></a>
-
-<p>做法：1.创建调整图层</p>
-<p><img src="/2020/04/28/%E7%BC%A9%E6%94%BE%E6%8B%89%E9%95%9C/1.png" alt></p>
-<p>​            2.找到两个素材连接点，使用剃刀工具将调整图层分为两半，再使用shift+方向键（前后调整5帧）大约四下裁剪，Ait拖动创建两个相同的调整图层</p>
-<p>​           3.在效果找到变换，拖进图层中</p>
-<p>​           4.创建关键帧，在结尾将缩放调为200%，选中两个关键帧，右键淡入淡出，拖动速率曲线</p>
-<p>​           5.同理，但是曲线相反，同样应用在第二个图层</p>
-<p><strong>2.使用动态拼贴（1-3已添加为预设）</strong></p>
-<p>使用镜像来避免缩放在小于100%时出现黑边，有放大放大，放大缩小，……(穷举，但是原理相同）</p>
-<p>​           1.先再次使用变换效果，将图层缩放为50%（不需要关键帧）</p>
-<p>​           2.找到镜像，复制粘贴四个效果</p>
-<p>​           3.修改镜像的位置，角度（0，90…），以达到整个屏幕铺满</p>
-<p>​           4.再添加一个变换效果，缩放为200%，这样就又恢复到原来的画面，但是四周有镜像画面</p>
-<p>​           5.与<strong>1</strong> 4相同（50%<em>100%=50% 50%</em>200%=100%)</p>
-
-        
-    
-
-    
-</div>
+                		<div class="md-timeline-content">
+                    			<div class="md-timeline-title"><a href="/2020/06/07/%E5%85%B3%E4%BA%8E%E8%A7%86%E9%A2%91%E6%A0%BC%E5%BC%8F%E7%9A%84%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86/">关于视频格式的一些知识</a></div>
+					<div class="md-timeline-info">
+						<span class="md-timeline-info-span">Categories:
+							<a class="category-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a>
+						</span>
+						<span class="md-timeline-info-span">Tags:
+							<a class="tag-link" href="/tags/%E7%A7%91%E6%99%AE/" rel="tag">科普</a>
+						</span>
+						
+					</div>
+					<p class="md-timeline-excerpt">
+						
+							
 
 
-                
+ 部分参考：
+ 柏听支醉        VCB
 
-                <!-- Post Comments -->
-                
-                    
-                
-            </div>
+						...
+					</p>
+                    		</div>
+			</div>	
+   		
+			<div class="md-timeline-block">
+                		<div class="md-timeline-date blue">
+                   			<div class="md-date">6月 05 2020</div>
+                		</div>
 
-            <!-- Post Prev & Next Nav -->
-            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
-    <!-- Prev Nav -->
-    
-        <a href="/2020/04/28/Hexo%E8%BF%9B%E9%98%B6/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
+                		<div class="md-timeline-content">
+                    			<div class="md-timeline-title"><a href="/2020/06/05/%E8%BF%91%E5%86%B5/">近况</a></div>
+					<div class="md-timeline-info">
+						<span class="md-timeline-info-span">Categories:
+							<a class="category-link" href="/categories/%E7%94%9F%E6%B4%BB/">生活</a>
+						</span>
+						<span class="md-timeline-info-span">Tags:
+							<a class="tag-link" href="/tags/%E7%94%9F%E6%B4%BB/" rel="tag">生活</a>
+						</span>
+						
+					</div>
+					<p class="md-timeline-excerpt">
+						
+							
 
-    <!-- Section Spacer -->
-    <div class="section-spacer"></div>
+本来上周就想补Blog了，但是这破笔记本硬件出问题了…我裂开了
+						...
+					</p>
+                    		</div>
+			</div>	
+   		
+			<div class="md-timeline-block">
+                		<div class="md-timeline-date blue">
+                   			<div class="md-date">4月 28 2020</div>
+                		</div>
 
-    <!-- Next Nav -->
-    
-        <a href="/2020/04/27/%E5%A5%BD%E4%B9%85%E4%B8%8D%E8%A7%81/" id="post_nav-older" class="next-content">
-            旧篇
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_forward</i>
-            </button>
-        </a>
-    
-</nav>
+                		<div class="md-timeline-content">
+                    			<div class="md-timeline-title"><a href="/2020/04/28/Hexo%E8%BF%9B%E9%98%B6/">Hexo进阶</a></div>
+					<div class="md-timeline-info">
+						<span class="md-timeline-info-span">Categories:
+							<a class="category-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a>
+						</span>
+						<span class="md-timeline-info-span">Tags:
+							<a class="tag-link" href="/tags/Hexo/" rel="tag">Hexo</a>
+						</span>
+						
+					</div>
+					<p class="md-timeline-excerpt">
+						
+							
 
-        </div>
-    </div>
+前言：在编辑代码的时候，切记不要使用系统自带的记事本 应使用如Notepad++之类的程序
+​            若已经用记事本编辑 要另存为 修改文件编码格式为UTF-8 否则中文会出现乱码
+						...
+					</p>
+                    		</div>
+			</div>	
+   		
+			<div class="md-timeline-block">
+                		<div class="md-timeline-date blue">
+                   			<div class="md-date">4月 28 2020</div>
+                		</div>
+
+                		<div class="md-timeline-content">
+                    			<div class="md-timeline-title"><a href="/2020/04/28/%E7%BC%A9%E6%94%BE%E6%8B%89%E9%95%9C/">缩放拉镜</a></div>
+					<div class="md-timeline-info">
+						<span class="md-timeline-info-span">Categories:
+							<a class="category-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a>
+						</span>
+						<span class="md-timeline-info-span">Tags:
+							<a class="tag-link" href="/tags/Pr/" rel="tag">Pr</a>
+						</span>
+						
+					</div>
+					<p class="md-timeline-excerpt">
+						
+							———有道的拷贝
+
+1.基础缩放
+利用两个素材的缩放来连接
+						...
+					</p>
+                    		</div>
+			</div>	
+   		
+			<div class="md-timeline-block">
+                		<div class="md-timeline-date blue">
+                   			<div class="md-date">4月 27 2020</div>
+                		</div>
+
+                		<div class="md-timeline-content">
+                    			<div class="md-timeline-title"><a href="/2020/04/27/%E5%A5%BD%E4%B9%85%E4%B8%8D%E8%A7%81/">好久不见</a></div>
+					<div class="md-timeline-info">
+						<span class="md-timeline-info-span">Categories:
+							<a class="category-link" href="/categories/%E7%94%9F%E6%B4%BB/">生活</a>
+						</span>
+						<span class="md-timeline-info-span">Tags:
+							<a class="tag-link" href="/tags/%E6%97%A5%E8%AE%B0/" rel="tag">日记</a>
+						</span>
+						
+					</div>
+					<p class="md-timeline-excerpt">
+						
+							2333…鸽了这么久(2 years)终于还是在这个寒假搞好了
+实际写这篇是在第二天下午了…但是贴图功能刚开发 就重写吧
+						...
+					</p>
+                    		</div>
+			</div>	
+   			   	  		
+   	</section>
+
+<script type="text/ls-javascript" id="page-timeline-script">
+    var adjustFooter = function() {
+        if( ($('#bottom').offset().top + $('#bottom').outerHeight() )<$(window).height() ) {
+            var footerBottom = $(window).height() - $('#bottom').outerHeight() - $('#bottom').offset().top;
+            $('#bottom').css('bottom', '-' + footerBottom + 'px');
+        }
+    };
+    $(document).ready(function() {
+        adjustFooter();
+    });
+</script>
+
+
 
 
 
@@ -735,14 +1079,6 @@ It will not impact the appearance and can give developers a lot of support :)
 </aside>
 
                     
-
-                    
-                        <!-- Footer Top Button -->
-                        <div id="back-to-top" class="toTop-wrap">
-    <a href="#top" class="toTop">
-        <i class="material-icons footer_top-i">expand_less</i>
-    </a>
-</div>
 
                     
 
