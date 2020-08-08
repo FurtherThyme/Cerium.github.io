@@ -46,7 +46,7 @@
     
     <title>
         
-            缩放拉镜 | 
+            Pr中的拉镜 | 
         
         PH&#39;s Blog
     </title>
@@ -56,10 +56,7 @@
     <link rel="icon" href="/img/favicon.png">
 
     <meta name="format-detection" content="telephone=no"/>
-    <meta name="description" itemprop="description" content="———有道的拷贝
-
-1.基础缩放
-利用两个素材的缩放来连接">
+    <meta name="description" itemprop="description" content="前言：所有拉镜都会牵扯到运动，运动必然会看到素材的黑边，这时候就需要一个在AE中叫做动态拼贴的功能">
     <meta name="keywords" content=",Pr">
     <meta name="theme-color" content="#0097A7">
 
@@ -221,7 +218,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="PH&#39;s Blog">
-    <meta name="msapplication-starturl" content="http://pyq4ll.coding-pages.com/2020/04/28/%E7%BC%A9%E6%94%BE%E6%8B%89%E9%95%9C/">
+    <meta name="msapplication-starturl" content="http://pyq4ll.coding-pages.com/2020/04/28/Pr%E4%B8%AD%E7%9A%84%E6%8B%89%E9%95%9C/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="PH&#39;s Blog">
@@ -236,19 +233,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://pyq4ll.coding-pages.com/2020/04/28/%E7%BC%A9%E6%94%BE%E6%8B%89%E9%95%9C/">
+    <meta property="og:url" content="http://pyq4ll.coding-pages.com/2020/04/28/Pr%E4%B8%AD%E7%9A%84%E6%8B%89%E9%95%9C/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="缩放拉镜 | PH&#39;s Blog">
+    <meta property="og:title" content="Pr中的拉镜 | PH&#39;s Blog">
     <meta property="og:image" content="/img/favicon.png">
-    <meta property="og:description" content="———有道的拷贝
-
-1.基础缩放
-利用两个素材的缩放来连接">
+    <meta property="og:description" content="前言：所有拉镜都会牵扯到运动，运动必然会看到素材的黑边，这时候就需要一个在AE中叫做动态拼贴的功能">
     <meta property="og:article:tag" content="Pr"> 
 
     
         <meta property="article:published_time" content="Tue Apr 28 2020 11:55:04 GMT+0800">
-        <meta property="article:modified_time" content="Wed Jul 08 2020 12:20:11 GMT+0800">
+        <meta property="article:modified_time" content="Sat Aug 08 2020 19:27:43 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -256,7 +250,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://pyq4ll.coding-pages.com/2020/04/28/%E7%BC%A9%E6%94%BE%E6%8B%89%E9%95%9C/index.html" />
+        <link rel="canonical" href="http://pyq4ll.coding-pages.com/2020/04/28/Pr%E4%B8%AD%E7%9A%84%E6%8B%89%E9%95%9C/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -268,10 +262,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://pyq4ll.coding-pages.com/2020/04/28/%E7%BC%A9%E6%94%BE%E6%8B%89%E9%95%9C/index.html",
-    "headline": "缩放拉镜",
+    "mainEntityOfPage": "http://pyq4ll.coding-pages.com/2020/04/28/Pr%E4%B8%AD%E7%9A%84%E6%8B%89%E9%95%9C/index.html",
+    "headline": "Pr中的拉镜",
     "datePublished": "Tue Apr 28 2020 11:55:04 GMT+0800",
-    "dateModified": "Wed Jul 08 2020 12:20:11 GMT+0800",
+    "dateModified": "Sat Aug 08 2020 19:27:43 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Cerium",
@@ -290,10 +284,7 @@
         }
     },
     "keywords": ",Pr",
-    "description": "———有道的拷贝
-
-1.基础缩放
-利用两个素材的缩放来连接",
+    "description": "前言：所有拉镜都会牵扯到运动，运动必然会看到素材的黑边，这时候就需要一个在AE中叫做动态拼贴的功能",
 }
 </script>
 
@@ -352,6 +343,15 @@
     <!-- Left aligned menu below button -->
     
     
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#动态拼贴"><span class="post-toc-number">1.</span> <span class="post-toc-text">动态拼贴</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#缩放拉镜"><span class="post-toc-number">2.</span> <span class="post-toc-text">缩放拉镜</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-基础缩放"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">1.基础缩放</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#旋转拉镜"><span class="post-toc-number">3.</span> <span class="post-toc-text">旋转拉镜</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#平移拉镜"><span class="post-toc-number">4.</span> <span class="post-toc-text">平移拉镜</span></a></li></ol>
+    </ul>
+    
 
 
 
@@ -372,7 +372,7 @@
         <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(https://s1.ax1x.com/2020/07/08/UEOQT1.md.png)">
     
             <p class="article-headline-p">
-                缩放拉镜
+                Pr中的拉镜
             </p>
         </div>
 
@@ -413,7 +413,7 @@
 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
     <li class="mdl-menu__item">在其它设备中阅读本文章</li>
     
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ4AAAEOCAAAAABd2qZ5AAADhElEQVR42u3ay27bQBAEQP//TyfXAEKk7pldSQaKJ4OWKW5d2vP4+eP65/pBgAMHDhw4cODAgQPHF3P8xNfj5x+fk3zm+Scf/yq/354FBw4cOHDc43gRRU8P9r/DbI7dPnl1Fhw4cODAcY0jf5X2zvMgnD05D/vnZDhw4MCB47Mcs9dq/2ofojhw4MCB4/dy5GRtE3D/Mw4cOHDg+CxHG2Btgbe5H60mvL9XigMHDhw4Di00fPPPH9jvwIEDBw4c62tfnj1/Zt40PHAWHDhw4MBxlKNdX8tpkrWG/f2oSNv0SnHgwIEDR8mxGSbN2nb5Il1epOHAgQMHju/haJuAsxJu1mqcBXb+jThw4MCB4wZHvkaQFHttbG+WKjb/KODAgQMHjnscm8bfvnhry602RIdjJxw4cODAseDIj50vpe3biPnqwyz+ceDAgQPHezjyBYXnh8+B2rbj2ZISBw4cOHDc4MiHPZsB1awk25SIxboDDhw4cOC4xtGuLOQF3ouoWzQBN2tzOHDgwIHjNkdeXOV32mjcLCjgwIEDB45v5phFXRvYp4qxdmCGAwcOHDjucewDchZy7SE3zcfVfgcOHDhw4Cg5kkDKY2y2JNG2F9tS8AUQDhw4cOA4ytE24/I43Kw+5MVhO9CK/u/AgQMHDhwXFhra12rXHaLiKoDOLxw4cODA8X6OpDmYD5/aAqwt5PaNRRw4cODAcYNjVhrlQ502mPcFWx3wOHDgwIHjGse9r0yOncdqPmQ60CvFgQMHDhyLOUvSXEuahrPSLmdqlyFWzUEcOHDgwFFynIrYWcglb9KuOxwo4XDgwIEDx4IjXxrIUfLozZ/TjqnyxiUOHDhw4DjLkbfw2mIvL8zakM5LzegzOHDgwIHjKMfs8JuFhk2cb2IVBw4cOHC8h6N9xXatYVa8nYr8A6tyOHDgwIFjMWeZNQTbNYgZU0uQDKVw4MCBA8cNjvbKm4DtasLhNYX823HgwIEDx1GONq7yEM0PlrT5NuirsRMOHDhw4BhxJOGa/zZpzOVtxzxEj03hcODAgQPHIY58YHOvmdguvc2egAMHDhw4fhfHrLhqQ3qzBoEDBw4cOL6HIymxZqVde7xTYyocOHDgwHGPo20Obkq4WSTncVucDgcOHDhwXOBoFxo2w6QEt71fFGw39jtw4MCBA4cLBw4cOHDgwIEDBw4c33v9BVurQ5R29/bBAAAAAElFTkSuQmCC">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ4AAAEOCAAAAABd2qZ5AAADl0lEQVR42u3ay46bUBAE0Pn/n062kRLjqm4uItJhNZINczlelPrx88v1x/WDAAcOHDhw4MCBAweOF3P8xNffd/3j0R++ef3M67s+/ZdPz6nfBQcOHDhwHOD4EkXBy18f7vr7sys/55cfDAcOHDhwHOPIg/A6IJOjXN+bBPb1XUWo48CBAweO13Bc33UdqPnLJJ/iwIEDB47/nSN/vTYIr1uELw1aHDhw4MCxaKjloTsbO7UjrvxsOHDgwIHjSY58zPP+vx/d78CBAwcOHH9xzK7NqlzeOsyfs3oXHDhw4MBxK0c+vNmUcElBmAf8vpDDgQMHDhzPcORhlpDlg6t9szKP5xumcDhw4MCBI24O5qOjPDjzMq/Fuo7kojjEgQMHDhwHOGZBmxRds4PmT07Qb94cxIEDBw4cJUc7EMrjs2VNiJPQ/RL8OHDgwIHjVo52+WC29JDHYR667TnrVTkcOHDgwLHmmEXmbLmtPfTmJynGTjhw4MCB48AEvy3wogbcqIE4GzW1cDhw4MCB4wRHW4DNFunyV82LwM3ACQcOHDhwnOBoS7KkkZcgtnHbRnhRTOLAgQMHjls58lW2dmUtKatmbceWGAcOHDhwPMkxO+hscFWvGowCuB1Z4cCBAweOExz1EsBiLHTXykI7xMKBAwcOHE9ybJp9G4JZ9M4Cvi7hcODAgQPHiCM/dNuq2yDO4rwdkuHAgQMHjhMcw0csmn0tSs7U3osDBw4cOJ7hmBVm7RJb8vxZY7EdmOHAgQMHjnMc+UOTT9slvDbCN0UgDhw4cOA4x5EvqJ1bKZgNsZKzRe1LHDhw4MBxgCMfNd1bzrVhvBmJ4cCBAweO93BsyqS2aZivMiTFZN0cxIEDBw4ca448ltqltLZJl69WzOL24w+PAwcOHDhu5Zi9zGbFrQ3LdokhKflw4MCBA8c5jjzeksJs00aclX+bkRgOHDhw4DjBkf/LfH2hLfPyaJ8NqL5ELw4cOHDguJWjHtKMxkX5ekHy6WxVDgcOHDhwPMMxW1DbvNiMoH1ysTyHAwcOHDgOcNy1XpDE26wF2S4xFC1IHDhw4MBxjOPegdCGuA3UdhyFAwcOHDjew9G+cH6sLy289WgKBw4cOHC8kyM5YrtIdx2ZCUce5Dhw4MCB40mOfBQ0axdulttmARxFOw4cOHDgOMDRHnS23HAuPmcDJxw4cODAcYLDhQMHDhw4cODAgQMHjpddvwH+dU7PK1ZLEgAAAABJRU5ErkJggg==">
     
 </ul>
 
@@ -459,7 +459,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=PH&#39;s Blog&title=缩放拉镜&summary=&pics=http://pyq4ll.coding-pages.com/img/favicon.png&url=http://pyq4ll.coding-pages.com/2020/04/28/%E7%BC%A9%E6%94%BE%E6%8B%89%E9%95%9C/index.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=PH&#39;s Blog&title=Pr中的拉镜&summary=&pics=http://pyq4ll.coding-pages.com/img/favicon.png&url=http://pyq4ll.coding-pages.com/2020/04/28/Pr%E4%B8%AD%E7%9A%84%E6%8B%89%E9%95%9C/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 QQ
             </li>
@@ -478,25 +478,51 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>———有道的拷贝</p>
-<hr>
-<p><strong>1.基础缩放</strong></p>
-<p>利用两个素材的缩放来连接</p>
- <a id="more"></a>
+        <p>前言：所有拉镜都会牵扯到运动，运动必然会看到素材的黑边，这时候就需要一个在AE中叫做动态拼贴的功能</p>
+<a id="more"></a>
 
-<p>做法：1.创建调整图层</p>
-<p><img src="/2020/04/28/%E7%BC%A9%E6%94%BE%E6%8B%89%E9%95%9C/1.png" alt></p>
-<p>​            2.找到两个素材连接点，使用剃刀工具将调整图层分为两半，再使用shift+方向键（前后调整5帧）大约四下裁剪，Ait拖动创建两个相同的调整图层</p>
-<p>​           3.在效果找到变换，拖进图层中</p>
-<p>​           4.创建关键帧，在结尾将缩放调为200%，选中两个关键帧，右键淡入淡出，拖动速率曲线</p>
-<p>​           5.同理，但是曲线相反，同样应用在第二个图层</p>
-<p><strong>2.使用动态拼贴（1-3已添加为预设）</strong></p>
-<p>使用镜像来避免缩放在小于100%时出现黑边，有放大放大，放大缩小，……(穷举，但是原理相同）</p>
-<p>​           1.先再次使用变换效果，将图层缩放为50%（不需要关键帧）</p>
+<p>——Pr需要事先做好预设，它能让你的素材周围没有黑边，变成一个镜面（我也不知道怎么说）放图算了</p>
+<p><img src="https://s1.ax1x.com/2020/08/08/aIlhgH.png" alt></p>
+<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;（影流之主2333 黑边是截图的问题）</p>
+<p>恢复原来的样子，只需要找到效果“变换”再调整大小为200%（50% * 200% = 100%）</p>
+<p>虽然和原来一样 但如果放大监视器，就和上面的图片一样</p>
+<hr>
+<h1 id="动态拼贴"><a href="#动态拼贴" class="headerlink" title="动态拼贴"></a>动态拼贴</h1><p>使用镜像来避免运动时出现黑边</p>
+<p>​           1.先使用变换效果，将图层缩放为50%（不需要关键帧）</p>
 <p>​           2.找到镜像，复制粘贴四个效果</p>
+<p><img src="https://s1.ax1x.com/2020/08/08/aIGBi6.png" alt="aIGBi6.png"></p>
 <p>​           3.修改镜像的位置，角度（0，90…），以达到整个屏幕铺满</p>
+<img src="https://s1.ax1x.com/2020/08/08/aIGDJK.png" alt="aIGDJK.png" style="zoom:80%;">
+
 <p>​           4.再添加一个变换效果，缩放为200%，这样就又恢复到原来的画面，但是四周有镜像画面</p>
-<p>​           5.与<strong>1</strong> 4相同（50%<em>100%=50% 50%</em>200%=100%)</p>
+<h1 id="缩放拉镜"><a href="#缩放拉镜" class="headerlink" title="缩放拉镜"></a>缩放拉镜</h1><h2 id="1-基础缩放"><a href="#1-基础缩放" class="headerlink" title="1.基础缩放"></a><strong>1.基础缩放</strong></h2><p>利用两个素材的缩放来连接 有放大放大，放大缩小，……(穷举，但是原理相同)</p>
+<p>做法：1.创建调整图层</p>
+<p><img src="https://s1.ax1x.com/2020/08/08/aIlf8e.png" alt></p>
+<p>​            2.找到两个素材连接点，使用剃刀工具将调整图层分为两半，再使用shift+方向键（前后调整5帧）大约四下裁剪(根据情况而定)，Alt拖动创建两个相同的调整图层</p>
+<p><img src="https://s1.ax1x.com/2020/08/08/aI15JU.png" alt></p>
+<p>​           3.在效果找到变换，拖进图层中</p>
+<p><img src="https://s1.ax1x.com/2020/08/08/aI1xJO.png" alt></p>
+<p>​           4.创建关键帧，在结尾将缩放调为200%，选中两个关键帧，右键淡入淡出，拖动速率曲线</p>
+<p>如图则都向右拉 得到一个加速度逐渐增大的曲线</p>
+<p><img src="https://s1.ax1x.com/2020/08/08/aI3YfU.png" alt>)<img src="https://s1.ax1x.com/2020/08/08/aI3JYT.png" alt="aI3JYT.png"></p>
+<p>​           5.在第二个图层同理，但是曲线相反</p>
+<p><strong>这样就能使过渡时的速度很大 达到一种流畅的效果</strong></p>
+<h1 id="旋转拉镜"><a href="#旋转拉镜" class="headerlink" title="旋转拉镜"></a>旋转拉镜</h1><p>其实原理的话和缩放拉镜是一样的 只不过需要添加关键帧变成了“旋转”</p>
+<p>做法：1.在衔接的两段素材上都加上动态拼贴</p>
+<p>​            2.在“变换”中的“旋转”打上关键帧</p>
+<p>​            3.你可以顺时针旋转(0-180° 180°-360°)，也可以逆时针 看个人喜好而定</p>
+<p>​               缓入缓出拉曲线 和上面一样</p>
+<h1 id="平移拉镜"><a href="#平移拉镜" class="headerlink" title="平移拉镜"></a>平移拉镜</h1><p>平移的话做法和前面的有些不同 主要在于曲线的处理</p>
+<p>做法：1.在衔接的两段素材上都加上动态拼贴</p>
+<p>​            2.位置K帧</p>
+<p>​            3.如果是从左右移动 第一段的结尾关键帧和第二段开头的关键帧要把画面拉到中间，两边不要留黑边</p>
+<p><img src="https://s1.ax1x.com/2020/08/08/aItvFI.png" alt="aItvFI.png"></p>
+<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;（这次就不是截图的问题了）</p>
+<p>​            4.拉曲线时 前面的步骤一样，在拉出像上面一样加速度逐渐增大的曲线后，选中加速度最大的那个关键帧，在临时插值中选择线性</p>
+<p><img src="https://s1.ax1x.com/2020/08/08/aINsAA.png" alt="aINsAA.png"></p>
+<img src="https://s1.ax1x.com/2020/08/08/aIND7d.png" alt="aIND7d.png" style="zoom:150%;">
+
+<p>​            这样就在以前的曲线后面再降低加速度，实践证明比原来较柔和 不会太生硬</p>
 
         
     
