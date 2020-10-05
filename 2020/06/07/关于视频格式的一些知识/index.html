@@ -1,510 +1,223 @@
 <!DOCTYPE html>
-<html style="display: none;" lang="zh">
+<html lang="zh-CN">
     <head>
     <meta charset="utf-8">
-    <!--
-        © Material Theme
-        https://github.com/viosey/hexo-theme-material
-        Version: 1.5.6 -->
-    <script>
-        window.materialVersion = "1.5.6"
-        // Delete localstorage with these tags
-        window.oldVersion = [
-            'codestartv1',
-            '1.3.4',
-            '1.4.0',
-            '1.4.0b1',
-            '1.5.0',
-            '1.5.2',
-            '1.5.5'
-        ]
-    </script>
 
-    <!-- dns prefetch -->
-    <meta http-equiv="x-dns-prefetch-control" content="on">
+    
 
-
-
-
-
-
-
-
-
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com"/>
-
-
-
-
-
-    <!-- Meta & Info -->
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <!-- 渲染优化 -->
     <meta name="renderer" content="webkit">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
-    <!-- Title -->
-    
-    <title>
-        
-            关于视频格式的一些知识 | 
-        
-        PH&#39;s Blog
-    </title>
-
-    <!-- Favicons -->
-    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
-    <link rel="icon" href="/img/favicon.png">
-
-    <meta name="format-detection" content="telephone=no"/>
-    <meta name="description" itemprop="description" content="
-
-
- 部分参考：
- 柏听支醉        VCB
-">
-    <meta name="keywords" content=",科普">
-    <meta name="theme-color" content="#0097A7">
-
-    <!-- Disable Fucking Bloody Baidu Tranformation -->
-    <meta http-equiv="Cache-Control" content="no-transform" />
-    <meta http-equiv="Cache-Control" content="no-siteapp" />
-
-    <!--[if lte IE 9]>
-        <link rel="stylesheet" href="/css/ie-blocker.css">
-
-        
-            <script src="/js/ie-blocker.zhCN.js"></script>
-        
-    <![endif]-->
-
-    <!-- Import lsloader -->
-    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
-
-    <!-- Import queue -->
-    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
-
-    <!-- Import CSS -->
-    
-        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
-        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?NKhlKQkXw/c66TR5p4wO+w==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
-
-        
-
-    
-
-    
-
-    <!-- Config CSS -->
-
-<!-- Other Styles -->
-<style>
-  body, html {
-    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
-    overflow-x: hidden !important;
-  }
-  
-  code {
-    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-  }
-
-  a {
-    color: #00838F;
-  }
-
-  .mdl-card__media,
-  #search-label,
-  #search-form-label:after,
-  #scheme-Paradox .hot_tags-count,
-  #scheme-Paradox .sidebar_archives-count,
-  #scheme-Paradox .sidebar-colored .sidebar-header,
-  #scheme-Paradox .sidebar-colored .sidebar-badge{
-    background-color: #0097A7 !important;
-  }
-
-  /* Sidebar User Drop Down Menu Text Color */
-  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
-  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
-    color: #0097A7 !important;
-  }
-
-  #post_entry-right-info,
-  .sidebar-colored .sidebar-nav li:hover > a,
-  .sidebar-colored .sidebar-nav li:hover > a i,
-  .sidebar-colored .sidebar-nav li > a:hover,
-  .sidebar-colored .sidebar-nav li > a:hover i,
-  .sidebar-colored .sidebar-nav li > a:focus i,
-  .sidebar-colored .sidebar-nav > .open > a,
-  .sidebar-colored .sidebar-nav > .open > a:hover,
-  .sidebar-colored .sidebar-nav > .open > a:focus,
-  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
-    color: #0097A7 !important;
-  }
-
-  .toTop {
-    background: #757575 !important;
-  }
-
-  .material-layout .material-post>.material-nav,
-  .material-layout .material-index>.material-nav,
-  .material-nav a {
-    color: #757575;
-  }
-
-  #scheme-Paradox .MD-burger-layer {
-    background-color: #757575;
-  }
-
-  #scheme-Paradox #post-toc-trigger-btn {
-    color: #757575;
-  }
-
-  .post-toc a:hover {
-    color: #00838F;
-    text-decoration: underline;
-  }
-
-</style>
-
-
-<!-- Theme Background Related-->
-
-    <style>
-      body{
-        background-color: #F5F5F5;
-      }
-
-      /* blog_info bottom background */
-      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
-        background-color: #fff;
-      }
-    </style>
-
-
-
-
-<!-- Fade Effect -->
-
-    <style>
-      .fade {
-        transition: all 800ms linear;
-        -webkit-transform: translate3d(0,0,0);
-        -moz-transform: translate3d(0,0,0);
-        -ms-transform: translate3d(0,0,0);
-        -o-transform: translate3d(0,0,0);
-        transform: translate3d(0,0,0);
-        opacity: 1;
-      }
-
-      .fade.out{
-        opacity: 0;
-      }
-    </style>
-
-
-<!-- Import Font -->
-<!-- Import Roboto -->
-
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
-
-
-<!-- Import Material Icons -->
-
-
-    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
-
-
-
-
-    <!-- Import jQuery -->
-    
-        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
-    
-
-    <!-- WebAPP Icons -->
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="PH&#39;s Blog">
-    <meta name="msapplication-starturl" content="http://pyq4ll.coding-pages.com/2020/06/07/%E5%85%B3%E4%BA%8E%E8%A7%86%E9%A2%91%E6%A0%BC%E5%BC%8F%E7%9A%84%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86/">
-    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="force-rendering" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="HandheldFriendly" content="True" >
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-title" content="PH&#39;s Blog">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="apple-touch-icon" href="/img/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <!-- Site Verification -->
+    <!--icon-->
+
+    <link rel="shortcut icon" type='image/x-icon' href="/favicon.png">
+
+
+    <!-- meta -->
+
+
+<title>关于视频格式的一些知识 | PH&#39;s Blog</title>
+
+
+    <meta name="keywords" content="科普">
+
+
+
+
+    <!-- OpenGraph -->
+ 
+    <meta name="description" content="部分参考：  柏听支醉        VCB  封装格式 and 媒体格式&#x2F;编码方式一个视频，包括画面、音频、章节，有时候还有字幕 这时就需要一个“容器”（封装格式）将它们打包在一起，每一件物品如视频、音频，称之为轨道(track) 每个轨道，都有自己的格式（媒体格式&#x2F;编码方式） 就比如平常所说的视频H.264 音频是AAC  常见封装格式1.MP4MP4即MPEG-4，指M">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于视频格式的一些知识">
+<meta property="og:url" content="http://pyq4ll.coding-pages.com/2020/06/07/%E5%85%B3%E4%BA%8E%E8%A7%86%E9%A2%91%E6%A0%BC%E5%BC%8F%E7%9A%84%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86/index.html">
+<meta property="og:site_name" content="PH&#39;s Blog">
+<meta property="og:description" content="部分参考：  柏听支醉        VCB  封装格式 and 媒体格式&#x2F;编码方式一个视频，包括画面、音频、章节，有时候还有字幕 这时就需要一个“容器”（封装格式）将它们打包在一起，每一件物品如视频、音频，称之为轨道(track) 每个轨道，都有自己的格式（媒体格式&#x2F;编码方式） 就比如平常所说的视频H.264 音频是AAC  常见封装格式1.MP4MP4即MPEG-4，指M">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s1.ax1x.com/2020/07/08/UEOMwR.md.png">
+<meta property="article:published_time" content="2020-06-07T02:44:31.000Z">
+<meta property="article:modified_time" content="2020-10-05T07:36:00.761Z">
+<meta property="article:author" content="Cerium">
+<meta property="article:tag" content="科普">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://s1.ax1x.com/2020/07/08/UEOMwR.md.png">
+
+
+    
+<link rel="stylesheet" href="/css/style/main.css">
+ 
+
+
+
     
     
-
-    <!-- RSS -->
-    
-
-    <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://pyq4ll.coding-pages.com/2020/06/07/%E5%85%B3%E4%BA%8E%E8%A7%86%E9%A2%91%E6%A0%BC%E5%BC%8F%E7%9A%84%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86/">
-    <meta property="og:type" content="blog">
-    <meta property="og:title" content="关于视频格式的一些知识 | PH&#39;s Blog">
-    <meta property="og:image" content="/img/favicon.png">
-    <meta property="og:description" content="
-
-
- 部分参考：
- 柏听支醉        VCB
-">
-    <meta property="og:article:tag" content="科普"> 
-
-    
-        <meta property="article:published_time" content="Sun Jun 07 2020 10:44:31 GMT+0800">
-        <meta property="article:modified_time" content="Sun Aug 30 2020 15:22:59 GMT+0800">
-    
-
-    <!-- The Twitter Card protocol -->
-    <meta name="twitter:card" content="summary_large_image">
-
-    <!-- Add canonical link for SEO -->
-    
-        <link rel="canonical" href="http://pyq4ll.coding-pages.com/2020/06/07/%E5%85%B3%E4%BA%8E%E8%A7%86%E9%A2%91%E6%A0%BC%E5%BC%8F%E7%9A%84%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86/index.html" />
-    
-
-    <!-- Structured-data for SEO -->
-    
+        <link rel="stylesheet" id="hl-default-theme" href="/css/highlight/default.css" media="none" onload="if(getComputedStyle(document.documentElement).getPropertyValue('--color-mode').indexOf('dark')===-1)this.media='all'">
         
-
-
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "mainEntityOfPage": "http://pyq4ll.coding-pages.com/2020/06/07/%E5%85%B3%E4%BA%8E%E8%A7%86%E9%A2%91%E6%A0%BC%E5%BC%8F%E7%9A%84%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86/index.html",
-    "headline": "关于视频格式的一些知识",
-    "datePublished": "Sun Jun 07 2020 10:44:31 GMT+0800",
-    "dateModified": "Sun Aug 30 2020 15:22:59 GMT+0800",
-    "author": {
-        "@type": "Person",
-        "name": "Cerium",
-        "image": {
-            "@type": "ImageObject",
-            "url": "/img/avatar.png"
-        },
-        "description": "最是难解少年梦，黄粱一转又付空"
-    },
-    "publisher": {
-        "@type": "Organization",
-        "name": "PH&#39;s Blog",
-        "logo": {
-            "@type":"ImageObject",
-            "url": "/img/favicon.png"
-        }
-    },
-    "keywords": ",科普",
-    "description": "
-
-
- 部分参考：
- 柏听支醉        VCB
-",
-}
-</script>
-
-
     
 
-    <!-- Analytics -->
-    
     
     
 
-    <!-- Custom Head -->
-    
+     
+
+    <!-- custom head -->
 
 <meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="\assets\css\APlayer.min.css" class="aplayer-style-marker">
 <script src="\assets\js\APlayer.min.js" class="aplayer-script-marker"></script>
 <script src="\assets\js\Meting.min.js" class="meting-script-marker"></script>
 </head>
 
-
-    
-        <body id="scheme-Paradox" class="lazy">
-            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
-                
-
-                <!-- Main Container -->
-                <main class="material-layout__content" id="main">
-
-                    <!-- Top Anchor -->
-                    <div id="top"></div>
-
-                    
-                        <!-- Hamburger Button -->
-                        <button class="MD-burger-icon sidebar-toggle">
-                            <span id="MD-burger-id" class="MD-burger-layer"></span>
-                        </button>
-                    
-
-                    <!-- Post TOC -->
-
-    
-    <!-- Back Button -->
-    <!--
-    <div class="material-back" id="backhome-div" tabindex="0">
-        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
-           href="#" onclick="window.history.back();return false;"
-           target="_self"
-           role="button"
-           data-upgraded=",MaterialButton,MaterialRipple">
-            <i class="material-icons" role="presentation">arrow_back</i>
-            <span class="mdl-button__ripple-container">
-                <span class="mdl-ripple"></span>
+    <body>
+        <div id="app">
+            <header class="header">
+    <div class="header__left">
+        <a href="/" class="button">
+            <span class="logo__text">
+                PH&#39;s Blog
             </span>
         </a>
     </div>
-    -->
-
-
-    <!-- Left aligned menu below button -->
-    
-    
-    <button id="post-toc-trigger-btn"
-        class="mdl-button mdl-js-button mdl-button--icon">
-        <i class="material-icons">format_list_numbered</i>
-    </button>
-
-    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#封装格式-and-媒体格式-编码方式"><span class="post-toc-number">1.</span> <span class="post-toc-text">封装格式 and 媒体格式&#x2F;编码方式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#常见封装格式"><span class="post-toc-number">2.</span> <span class="post-toc-text">常见封装格式</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-MP4"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">1.MP4</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#H-264的Profile和Level"><span class="post-toc-number">2.1.1.</span> <span class="post-toc-text">H.264的Profile和Level</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#HEVC-H-265（比起H-264更为强悍的编码方式）"><span class="post-toc-number">2.1.2.</span> <span class="post-toc-text">HEVC&#x2F;H.265（比起H.264更为强悍的编码方式）</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-MKV"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">2.MKV</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-FLV-全称Flash-Video-网络传输最广的格式"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">3.FLV 全称Flash Video 网络传输最广的格式</span></a></li></ol></li></ol>
-    </ul>
-    
-
-
-
-
-<!-- Layouts -->
-
-    <!-- Post Module -->
-    <div class="material-post_container">
-
-        <div class="material-post mdl-grid">
-            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
-
-                <!-- Post Header(Thumbnail & Title) -->
+    <div class="header__right">
+        
+            <div class="navbar__menus">
                 
-    <!-- Paradox Post Header -->
-    
-        <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(https://s1.ax1x.com/2020/07/08/UEOMwR.md.png)">
-    
-            <p class="article-headline-p">
-                关于视频格式的一些知识
-            </p>
-        </div>
-
-
-
-
-
+                    <a href="/" class="navbar-menu button">
+                        首页
+                    </a>
                 
-                    <!-- Paradox Post Info -->
-                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+                    <a href="/tags/" class="navbar-menu button">
+                        标签
+                    </a>
+                
+                    <a href="/archives/" class="navbar-menu button">
+                        归档
+                    </a>
+                
+                    <a href="/friends/" class="navbar-menu button">
+                        友链
+                    </a>
+                
+                    <a href="/diary/" class="navbar-menu button">
+                        开发日记
+                    </a>
+                
+            </div>
+        
+        
+        
+    <a href="/search/" id="btn-search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="24" height="24" fill="currentColor" stroke="currentColor" stroke-width="32"><path d="M192 448c0-141.152 114.848-256 256-256s256 114.848 256 256-114.848 256-256 256-256-114.848-256-256z m710.624 409.376l-206.88-206.88A318.784 318.784 0 0 0 768 448c0-176.736-143.264-320-320-320S128 271.264 128 448s143.264 320 320 320a318.784 318.784 0 0 0 202.496-72.256l206.88 206.88 45.248-45.248z"></path></svg>
+    </a>
 
-    <!-- Author Avatar -->
-    <div id="author-avatar">
-        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+
+        
+        
+
+         
+    <a href="#" class="button" id="b2t" aria-label="回到顶部" title="回到顶部">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="32" height="32">
+            <path d="M233.376 722.752L278.624 768 512 534.624 745.376 768l45.248-45.248L512 444.128zM192 352h640V288H192z" fill="currentColor"></path>
+        </svg>
+    </a>
+
+
+        
+            <a class="dropdown-icon button" id="btn-dropdown">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width='24' height='24' fill="none" stroke="currentColor" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round">
+                    <path fill="currentColor" d="M3.314,4.8h13.372c0.41,0,0.743-0.333,0.743-0.743c0-0.41-0.333-0.743-0.743-0.743H3.314c-0.41,0-0.743,0.333-0.743,0.743C2.571,4.467,2.904,4.8,3.314,4.8z M16.686,15.2H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,15.2,16.686,15.2z M16.686,9.257H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,9.257,16.686,9.257z"></path>
+                </svg>
+            </a>
+            <div class="dropdown-menus" id="dropdown-menus">
+                
+                    <a href="/" class="dropdown-menu button">
+                        首页
+                    </a>
+                
+                    <a href="/tags/" class="dropdown-menu button">
+                        标签
+                    </a>
+                
+                    <a href="/archives/" class="dropdown-menu button">
+                        归档
+                    </a>
+                
+                    <a href="/friends/" class="dropdown-menu button">
+                        友链
+                    </a>
+                
+                    <a href="/diary/" class="dropdown-menu button">
+                        开发日记
+                    </a>
+                
+            </div>
+        
     </div>
-    <!-- Author Name & Date -->
-    <div>
-        <strong>Cerium</strong>
-        <span>6月 07, 2020</span>
+</header>
+
+
+            <main class="main">
+    
+
+<div class="post-title">
+    <h1 class="post-title__text">
+        关于视频格式的一些知识
+    </h1>
+    <div class="post-title__meta">
+        <a href="/archives/2020/06/" class="post-meta__date button">
+    2020-06-07
+</a>
+        
+    <span class="separate-dot"></span><a href="/categories/%E7%AC%94%E8%AE%B0/" class="button">笔记</a>
+
+ 
+        
+    
+    
+
+
+ 
+
+ 
     </div>
-
-    <div class="section-spacer"></div>
-
-    <!-- Favorite -->
-    <!--
-        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
-            <i class="material-icons" role="presentation">favorite</i>
-            <span class="visuallyhidden">favorites</span>
-        </button>
-    -->
-
-    <!-- Qrcode -->
-    
-        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-    <i class="material-icons" role="presentation">devices other</i>
-    <span class="visuallyhidden">devices other</span>
-</button>
-<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
-    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
-    
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAT4AAAE+CAAAAAAxUyPsAAAE50lEQVR42u3ay24cMQwEQP//TyfXAI5nu0nJj6R0CpzdkVRjwFRTb7+MxXhDgA8fPnwGPnz48Bn48P0Qvrd4vP/8nz/J//d53vdr+8sGyuc/fzffOz58+PDhw3eK78Wf6g+W2PI9v7bnJyRkyROStT374MOHDx8+fKf4kmk2y31eYr6x5MmbkuvFfvHhw4cPH75P5Mv/wLeFSx4ftKFGW3Lhw4cPHz5834cv2WoerLeIeWE0Wxs+fPjw4cP3mXxtUZJH9nnckBQ3bazQFlUXex348OHDhw/f6ILav/TvL7jfhw8fPnz4/mO+s6MNFPaBfnTID9ZQ7BEfPnz48OFb8D0f488uelY05E30/CLdrGWODx8+fPjw7fmSlnZSXrRR+IYsjwBmP3+xL3z48OHDh+8QX9tyTuCSrbblzvMK85c3a+Hjw4cPHz58Z/nyqH12sN8USXkhkhC3LwkfPnz48OE7xfe8iM1hvkWcFUN5fJ8XKPjw4cOHD98NvjbCzhve+ZH+VEBfH/7jWfDhw4cPH74bfO1hO/l5e2msbV238UFSoNT3+/Dhw4cPH76Sry0C8pj71JaSz29eT9FIwIcPHz58+BZ8+XLzEL8N6/dPSMiS2aO2AT58+PDhw7fma0uBJFbYfHdTuMwu1RWNB3z48OHDh2/B107Z4uYLzWnyNec7LRoM+PDhw4cP34Jv1izffOZG6J/PNQsU8OHDhw8fvht8+SOSbeSt6E2r+3muU78K+PDhw4cP3z2+NhZvj/2b0Pw5vJiNNvTHhw8fPnz4NnyzpeeLyOHyAmX/CmfFED58+PDhw7fn21wmmzXX29b1/gW0JdqwTY4PHz58+PCN+NqQPSkakqN+vo28rJl9/sUvFj58+PDhw7fg2wcBs9Z1e7w/9ZO2LVGE9fjw4cOHD1/Ad6PNPDuitzH95hLbai58+PDhw4dvzZfE1m0EvwHdh/tJg2G2Enz48OHDh2/Dl18Ca5vKbZu8jdHb2ZNdRN/Chw8fPnz4jvLl7fNNKJCDbtoDm+j/w+fgw4cPHz58h/j2F7+SQH/TVm8jjFlLYFi44MOHDx8+fGWfdxYfzIqVvGjIEfOSqy138OHDhw8fvlN8s03mLfD2cltemsxKolkBhA8fPnz48N3g27e9Z83vWWzRlj7Jy4iKM3z48OHDh2/Bl7S6843du+KWlyOzNnnedMeHDx8+fPg2fO3j2uA+b2DPip62hMpfNj58+PDhw3eDr43g86Xn4XtLPLuC1gb0+PDhw4cP3w2+zcWvPKbfhxRthDFrDFy5ZYAPHz58+PB9ymbag/2srNmE+G1hhA8fPnz48J3layP4tsHczrVpAGy+Nbyghg8fPnz48K0jg1nrujh+x2MW0M/mqm8Z4MOHDx8+fOUNq1npcIpy0wKfvbBV6YYPHz58+PAt+No/3m00kG9+9vzNdbS8lY4PHz58+PCd5Wvb2JtCZ9MIb5/QtsOT4B4fPnz48OE7xdcWFm0o0F5uy4uJdp2bF4MPHz58+PB9FV80WXykT1a1CffzJw8jA3z48OHDh+8CXz5xe0TPW93Pq9q04aNv4cOHDx8+fIf42ktds1BgxprAPX+ybaVfaZPjw4cPHz58i9B8U/rMtp1HGPuLbkVYjw8fPnz48MV8Rjvw4cOHD5+BDx8+fAY+fN94/AZ016AuXN4kYgAAAABJRU5ErkJggg==">
-    
-</ul>
-
-    
-
-    <!-- Tags (bookmark) -->
-    
-    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-        <i class="material-icons" role="presentation">bookmark</i>
-        <span class="visuallyhidden">bookmark</span>
-    </button>
-    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
-        <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/%E7%A7%91%E6%99%AE/" rel="tag">科普</a>
-    </ul>
-    
-
-    <!-- Share -->
-    
-        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-    <i class="material-icons" role="presentation">share</i>
-    <span class="visuallyhidden">share</span>
-</button>
-<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
-    
-
-    
-
-    <!-- Share Weibo -->
-    
-
-    <!-- Share Twitter -->
-    
-
-    <!-- Share Facebook -->
-    
-
-    <!-- Share Google+ -->
-    
-
-    <!-- Share LinkedIn -->
-    
-
-    <!-- Share QQ -->
-    
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=PH&#39;s Blog&title=关于视频格式的一些知识&summary=&pics=http://pyq4ll.coding-pages.com/img/favicon.png&url=http://pyq4ll.coding-pages.com/2020/06/07/%E5%85%B3%E4%BA%8E%E8%A7%86%E9%A2%91%E6%A0%BC%E5%BC%8F%E7%9A%84%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86/index.html" target="_blank">
-            <li class="mdl-menu__item">
-                分享到 QQ
-            </li>
-        </a>
-    
-
-    <!-- Share Telegram -->
-    
-</ul>
-
-    
 </div>
 
-                
 
-                <!-- Post Content -->
-                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    <aside class="post-side">
+        <div class="post-side__toc">
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#封装格式-and-媒体格式-编码方式"><span class="toc-text">封装格式 and 媒体格式&#x2F;编码方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#常见封装格式"><span class="toc-text">常见封装格式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-MP4"><span class="toc-text">1.MP4</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#H-264的Profile和Level"><span class="toc-text">H.264的Profile和Level</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#HEVC-H-265（比起H-264更为强悍的编码方式）"><span class="toc-text">HEVC&#x2F;H.265（比起H.264更为强悍的编码方式）</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-MKV"><span class="toc-text">2.MKV</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-FLV-全称Flash-Video-网络传输最广的格式"><span class="toc-text">3.FLV 全称Flash Video 网络传输最广的格式</span></a></li></ol></li></ol>
+        </div>
+    </aside>
+    <a class="btn-toc button" id="btn-toc">
+        <svg viewBox="0 0 1024 1024" width="32" height="32" xmlns="http://www.w3.org/2000/svg">
+            <path d="M128 256h64V192H128zM320 256h576V192H320zM128 544h64v-64H128zM320 544h576v-64H320zM128 832h64v-64H128zM320 832h576v-64H320z" fill="currentColor"></path>
+        </svg>
+    </a>
+    <div class="toc-menus" id="toc-menus">
+        <div class="toc-title">文章目录</div>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#封装格式-and-媒体格式-编码方式"><span class="toc-text">封装格式 and 媒体格式&#x2F;编码方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#常见封装格式"><span class="toc-text">常见封装格式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-MP4"><span class="toc-text">1.MP4</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#H-264的Profile和Level"><span class="toc-text">H.264的Profile和Level</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#HEVC-H-265（比起H-264更为强悍的编码方式）"><span class="toc-text">HEVC&#x2F;H.265（比起H.264更为强悍的编码方式）</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-MKV"><span class="toc-text">2.MKV</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-FLV-全称Flash-Video-网络传输最广的格式"><span class="toc-text">3.FLV 全称Flash Video 网络传输最广的格式</span></a></li></ol></li></ol>
+    </div>
+
+
+<article class="post content-card">
+    <div class="post__header">
     
-        
-    <div id="aplayer-YuqMqyrR" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="28152549" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div>
+        <div class="post-thumbnail lazyload" data-bg="https://s1.ax1x.com/2020/07/08/UEOMwR.md.png"></div>
+    
+</div>
+    <div class="post__content">
+        <a id="more"></a>
+
+
+    <div id="aplayer-qLAfwkNd" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="28152549" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div>
 
 <blockquote>
 <p> 部分参考：</p>
 <p> <a href="https://www.bilibili.com/video/BV17x411N71u" target="_blank" rel="noopener">柏听支醉</a>        <a href="https://vcb-s.com/archives/2726" target="_blank" rel="noopener">VCB</a></p>
 </blockquote>
-<a id="more"></a>
-
 <h3 id="封装格式-and-媒体格式-编码方式"><a href="#封装格式-and-媒体格式-编码方式" class="headerlink" title="封装格式 and 媒体格式/编码方式"></a>封装格式 and 媒体格式/编码方式</h3><p>一个视频，包括画面、音频、章节，有时候还有字幕 这时就需要一个“容器”（封装格式）将它们打包在一起，每一件物品如视频、音频，称之为轨道(track) 每个轨道，都有自己的格式（媒体格式/编码方式） 就比如平常所说的视频H.264 音频是AAC</p>
 <hr>
 <h3 id="常见封装格式"><a href="#常见封装格式" class="headerlink" title="常见封装格式"></a>常见封装格式</h3><h4 id="1-MP4"><a href="#1-MP4" class="headerlink" title="1.MP4"></a>1.MP4</h4><p>MP4即MPEG-4，指MPEG标准第四部分</p>
@@ -518,455 +231,167 @@
 <h5 id="HEVC-H-265（比起H-264更为强悍的编码方式）"><a href="#HEVC-H-265（比起H-264更为强悍的编码方式）" class="headerlink" title="HEVC/H.265（比起H.264更为强悍的编码方式）"></a>HEVC/H.265（比起H.264更为强悍的编码方式）</h5><h4 id="2-MKV"><a href="#2-MKV" class="headerlink" title="2.MKV"></a>2.MKV</h4><p>优势：可以封入多达16条音轨 还可以封装字幕</p>
 <h4 id="3-FLV-全称Flash-Video-网络传输最广的格式"><a href="#3-FLV-全称Flash-Video-网络传输最广的格式" class="headerlink" title="3.FLV 全称Flash Video 网络传输最广的格式"></a>3.FLV 全称Flash Video 网络传输最广的格式</h4><p>优势：体积很小 同样也可以使用H.264 使用H.264后的名字叫F4V</p>
 
-        
+    </div>
+     
+    <div class="post-footer__meta">
+    <p>
+        更新于 2020-10-05
+    </p>
+</div> 
+    <div class="post-meta__cats">
     
-
+        <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-cats__link button">笔记</a>
     
-</div>
-
-
-                
-
-                <!-- Post Comments -->
-                
-                    
-                
-            </div>
-
-            <!-- Post Prev & Next Nav -->
-            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
-    <!-- Prev Nav -->
     
-        <a href="/2020/06/22/%E5%8E%A6%E9%97%A8%E6%B8%B8%E8%AE%B0/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
+        <a href="/tags/%E7%A7%91%E6%99%AE/" class="post-tags__link button"># 科普</a>
     
+</div> 
+</article>
 
-    <!-- Section Spacer -->
-    <div class="section-spacer"></div>
 
-    <!-- Next Nav -->
-    
-        <a href="/2020/06/05/%E8%BF%91%E5%86%B5/" id="post_nav-older" class="next-content">
-            旧篇
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_forward</i>
-            </button>
-        </a>
-    
-</nav>
-
+    <div class="nav">
+        <div class="nav__prev">
+            
+                <a href="/2020/06/22/%E5%8E%A6%E9%97%A8%E6%B8%B8%E8%AE%B0/" class="nav__link">
+                    <div>
+                        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M589.088 790.624L310.464 512l278.624-278.624 45.248 45.248L400.96 512l233.376 233.376z" fill="#808080"></path></svg>
+                    </div>
+                    <div>
+                        <div class="nav__label">
+                            Previous Post
+                        </div>
+                        <div class="nav__title">
+                            厦门游记
+                        </div>
+                    </div>
+                </a>
+            
+        </div>
+        <div class="nav__next">
+            
+                <a href="/2020/06/05/%E8%BF%91%E5%86%B5/" class="nav__link">
+                    <div>
+                        <div class="nav__label">
+                            Next Post
+                        </div>
+                        <div class="nav__title">
+                            近况
+                        </div>
+                    </div>
+                    <div>
+                        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M434.944 790.624l-45.248-45.248L623.04 512l-233.376-233.376 45.248-45.248L713.568 512z" fill="#808080"></path></svg>
+                    </div>
+                </a>
+            
         </div>
     </div>
 
 
 
-                    
-                        <!-- Overlay For Active Sidebar -->
-<div class="sidebar-overlay"></div>
-
-<!-- Material sidebar -->
-<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
-    <div id="sidebar-main">
-        <!-- Sidebar Header -->
-        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
-    <!-- Top bar -->
-    <div class="top-bar"></div>
-
-    <!-- Sidebar toggle button -->
-    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
-        <i class="material-icons">clear_all</i>
-        <span class="mdl-button__ripple-container">
-            <span class="mdl-ripple">
-            </span>
-        </span>
-    </button>
-
-    <!-- Sidebar Avatar -->
-    <div class="sidebar-image">
-        <img src="/img/avatar.png" alt="Cerium's avatar">
-    </div>
-
-    <!-- Sidebar Email -->
-    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
-        2462658016@qq.com
-        <b class="caret"></b>
-    </a>
-</div>
 
 
-        <!-- Sidebar Navigation  -->
-        <ul class="nav sidebar-nav">
-    <!-- User dropdown  -->
-    <li class="dropdown">
-        <ul id="settings-dropdown" class="dropdown-menu">
-            
-                <li>
-                    <a href="mailto:2462658016@qq.com" target="_blank" title="Email Me">
-                        
-                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
-                        
-                        Email Me
-                    </a>
-                </li>
-            
-        </ul>
-    </li>
+</main>
 
-    <!-- Homepage -->
+            <footer class="footer">
     
-        <li id="sidebar-first-li">
-            <a href="/">
-                
-                    <i class="material-icons sidebar-material-icons">home</i>
-                
-                主页
-            </a>
-        </li>
+
+
+    
+     
+ 
+
+ 
+    
         
+        <p class="footer-copyright">
+            Copyright © 2020&nbsp;-&nbsp;2020 <a href="/">PH&#39;s Blog</a>
+        </p>
     
-
-    <!-- Archives  -->
     
-        <li class="dropdown">
-            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
-                
-                    <i class="material-icons sidebar-material-icons">inbox</i>
-                
-                    归档
-                <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu">
-            <li>
-                <a class="sidebar_archives-link" href="/archives/2020/08/">八月 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/07/">七月 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/06/">六月 2020<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/04/">四月 2020<span class="sidebar_archives-count">3</span></a>
-            </ul>
-        </li>
-        
-    
-
-    <!-- Categories  -->
-    
-        <li class="dropdown">
-            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
-                
-                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
-                
-                分类
-                <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu">
-                <li>
-                <a class="sidebar_archives-link" href="/categories/AMV/">AMV<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/%E7%94%9F%E6%B4%BB/">生活<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记<span class="sidebar_archives-count">3</span></a>
-            </ul>
-        </li>
-        
-    
-
-    <!-- Pages  -->
-    
-        <li>
-            <a href="/about" title="关于我">
-                
-                    <i class="material-icons sidebar-material-icons">person</i>
-                
-                关于我
-            </a>
-        </li>
-        
-    
-        <li>
-            <a href="/links" title="友链">
-                
-                    <i class="material-icons sidebar-material-icons">link</i>
-                
-                友链
-            </a>
-        </li>
-        
-    
-        <li>
-            <a href="/gallery" title="相册">
-                
-                    <i class="material-icons sidebar-material-icons">perm_media</i>
-                
-                相册
-            </a>
-        </li>
-        
-            <li class="divider"></li>
-        
-    
-
-    <!-- Article Number  -->
-    
-        <li>
-            <a href="/archives">
-                文章总数
-                <span class="sidebar-badge">8</span>
-            </a>
-        </li>
-        
-    
-</ul>
-
-
-        <!-- Sidebar Footer -->
-        <!--
-I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
-If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
-It will not impact the appearance and can give developers a lot of support :)
-
-很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
-如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
-它不会影响美观并可以给开发者很大的支持和动力。 :)
--->
-
-<!-- Sidebar Divider -->
-
-
-<!-- Theme Material -->
-
-
-<!-- Help & Support -->
-<!--
-
--->
-
-<!-- Feedback -->
-<!--
-
--->
-
-<!-- About Theme -->
-<!--
-
--->
-
-    </div>
-
-    <!-- Sidebar Image -->
-    
-
-</aside>
-
-                    
-
-                    
-                        <!-- Footer Top Button -->
-                        <div id="back-to-top" class="toTop-wrap">
-    <a href="#top" class="toTop">
-        <i class="material-icons footer_top-i">expand_less</i>
-    </a>
-</div>
-
-                    
-
-                    <!--Footer-->
-<footer class="mdl-mini-footer" id="bottom">
-    
-        <!-- Paradox Footer Left Section -->
-        <div class="mdl-mini-footer--left-section sns-list">
-    <!-- Twitter -->
-    
-
-    <!-- Facebook -->
-    
-
-    <!-- Google + -->
-    
-
-    <!-- Weibo -->
-    
-
-    <!-- Instagram -->
-    
-
-    <!-- Tumblr -->
-    
-
-    <!-- Github -->
-    
-
-    <!-- LinkedIn -->
-    
-
-    <!-- Zhihu -->
-    
-
-    <!-- Bilibili -->
-    
-        <a href="https://space.bilibili.com/107814866" target="_blank">
-            <button class="mdl-mini-footer--social-btn social-btn footer-sns-bilibili">
-                <span class="visuallyhidden">Bilibili</span>
-            </button><!--
-     --></a>
-    
-
-    <!-- Telegram -->
-    
-
-    <!-- V2EX -->
-    
-
-    <!-- Segmentfault -->
-    
-</div>
-
-
-        <!--Copyright-->
-        <div id="copyright">
-            Copyright&nbsp;©&nbsp;<span year></span>&nbsp;PH's Blog
-            
-        </div>
-
-        <!-- Paradox Footer Right Section -->
-
-        <!--
-        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
-        It will not impact the appearance and can give developers a lot of support :)
-
-        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
-        它不会影响美观并可以给开发者很大的支持。 :)
-        -->
-
-        <div class="mdl-mini-footer--right-section">
-            <div>
-                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
-                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
-            </div>
-        </div>
-    
+    <p>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme - <a href="https://github.com/ChrAlpha/hexo-theme-cards" target="_blank">Cards</a></p>
 </footer>
 
+        </div>
+        
+    <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+    <script>
+        window.lazyLoadOptions = {
+            elements_selector: ".lazy",
+            threshold: 0
+        };
+    </script>
+ 
 
-                    <!-- Import JS File -->
+ 
 
-    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+ 
 
+ 
 
-
-    <script>lsloader.load("js_js","/js/js.min.js?Bn9UzEm8RrBSxqyZB0zPjA==", true)</script>
-
-
-
-    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
-
-
-<script type="text/ls-javascript" id="NProgress-script">
-    NProgress.configure({
-        showSpinner: true
-    });
-    NProgress.start();
-    $('#nprogress .bar').css({
-        'background': '#29d'
-    });
-    $('#nprogress .peg').css({
-        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
-    });
-    $('#nprogress .spinner-icon').css({
-        'border-top-color': '#29d',
-        'border-left-color': '#29d'
-    });
-    setTimeout(function() {
-        NProgress.done();
-        $('.fade').removeClass('out');
-    }, 800);
-</script>
+  
 
 
 
+ 
 
-
-
-
-
-
-
-
-
-
-<!-- UC Browser Compatible -->
-<script>
-	var agent = navigator.userAgent.toLowerCase();
-	if(agent.indexOf('ucbrowser')>0) {
-		document.write('
-<link rel="stylesheet" href="/css/uc.css">
-');
-	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
-	}
-</script>
-
-<!-- Import prettify js  -->
-
-
-
-<!-- Window Load -->
-<!-- add class for prettify -->
-<script type="text/ls-javascript" id="window-load">
-    $(window).on('load', function() {
-        // Post_Toc parent position fixed
-        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
-    });
 
     
+ 
+
+
     
-</script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
 
-<!-- MathJax Load-->
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.4.1/dist/jquery.fancybox.min.css">
 
+    
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.4.1/dist/jquery.fancybox.min.js"></script>
 
-<!-- Bing Background -->
-
-
-<script type="text/ls-javascript" id="lazy-load">
-    // Offer LazyLoad
-    queue.offer(function(){
-        $('.lazy').lazyload({
-            effect : 'show'
-        });
-    });
-
-    // Start Queue
-    $(document).ready(function(){
-        setInterval(function(){
-            queue.execNext();
-        },200);
-    });
-</script>
-
-<!-- Custom Footer -->
-
-
-
-<script>
-    var copyrightNow = new Date().getFullYear();
-    var textContent = document.querySelector('span[year]')
-
-    copyrightSince = 0000;
-    if (copyrightSince === copyrightNow||copyrightSince === 0000) {
-        textContent.textContent = copyrightNow
-    } else {
-        textContent.textContent = copyrightSince + ' - ' + copyrightNow
-    }
-
-    (function(){
-        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
-
-        for (var i = 0; i < scriptList.length; ++i) {
-            var item = scriptList[i];
-            lsloader.runInlineScript(item.id,item.id);
+    <script>
+        let lazyloadT = Boolean('true'),
+            auto_fancybox = Boolean('true')
+        if (auto_fancybox) {
+            $(".post__content").find('img').each(function () {
+                var element = document.createElement("a");
+                $(element).attr("data-fancybox", "gallery");
+                $(element).attr("href", $(this).attr("src"));
+                if (lazyloadT) {
+                    $(element).attr("href", $(this).attr("data-srcset"));
+                }
+                $(this).wrap(element);
+            });
+        } else {
+            $(".post__content").find("fancybox").find('img').each(function () {
+                var element = document.createElement("a");
+                $(element).attr("data-fancybox", "gallery");
+                $(element).attr("href", $(this).attr("src"));
+                if (lazyloadT) {
+                    $(element).attr("href", $(this).attr("data-srcset"));
+                }
+                $(this).wrap(element);
+            });
         }
-    })()
-console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
-</script>
+    </script>
+ 
 
-                </main>
-            </div>
-        </body>
-    
+ 
+
+
+    <script>
+        window.onload = () => {
+            document.querySelectorAll('.sliding-fold').forEach((item) => {
+                item.querySelector('summary').onclick = () => {
+                    item.classList.toggle("collapsed");
+                    item.classList.toggle("expanded");
+                };
+            });
+        };
+    </script>
+ 
+
+
+
+
+    </body>
 </html>
