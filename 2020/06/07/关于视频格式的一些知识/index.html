@@ -15,7 +15,21 @@
 
     <!--icon-->
 
-    <link rel="shortcut icon" type='image/x-icon' href="/favicon.png">
+    
+        <link rel="shortcut icon" href="/favicon.png">
+    
+    
+        <link rel="icon" type="image/png" sizes="16x16" href="/small.png">
+    
+    
+        <link rel="icon" type="image/png" sizes="32x32" href="/medium.png">
+    
+    
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple_touch_icon.png">
+    
+    
+        <link rel="mask-icon" href="/safari_pinned_tab.png">
+    
 
 
     <!-- meta -->
@@ -31,20 +45,18 @@
 
     <!-- OpenGraph -->
  
-    <meta name="description" content="部分参考：  柏听支醉        VCB  封装格式 and 媒体格式&#x2F;编码方式一个视频，包括画面、音频、章节，有时候还有字幕 这时就需要一个“容器”（封装格式）将它们打包在一起，每一件物品如视频、音频，称之为轨道(track) 每个轨道，都有自己的格式（媒体格式&#x2F;编码方式） 就比如平常所说的视频H.264 音频是AAC  常见封装格式1.MP4MP4即MPEG-4，指MPE">
+    <meta name="description" content="部分参考：  柏听支醉        VCB-Studio  封装格式 and 媒体格式&#x2F;编码方式一个视频，包括画面、音频、章节，有时候还有字幕 这时就需要一个“容器”（封装格式）将它们打包在一起，每一件物品如视频、音频，称之为轨道(track) 每个轨道，都有自己的格式（媒体格式&#x2F;编码方式） 就比如平常所说的视频H.264 音频是AAC  常见封装格式1.MP4MP4即MPEG">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于视频格式的一些知识">
 <meta property="og:url" content="http://pyq4ll.coding-pages.com/2020/06/07/%E5%85%B3%E4%BA%8E%E8%A7%86%E9%A2%91%E6%A0%BC%E5%BC%8F%E7%9A%84%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86/index.html">
 <meta property="og:site_name" content="PH&#39;s Blog">
-<meta property="og:description" content="部分参考：  柏听支醉        VCB  封装格式 and 媒体格式&#x2F;编码方式一个视频，包括画面、音频、章节，有时候还有字幕 这时就需要一个“容器”（封装格式）将它们打包在一起，每一件物品如视频、音频，称之为轨道(track) 每个轨道，都有自己的格式（媒体格式&#x2F;编码方式） 就比如平常所说的视频H.264 音频是AAC  常见封装格式1.MP4MP4即MPEG-4，指MPE">
+<meta property="og:description" content="部分参考：  柏听支醉        VCB-Studio  封装格式 and 媒体格式&#x2F;编码方式一个视频，包括画面、音频、章节，有时候还有字幕 这时就需要一个“容器”（封装格式）将它们打包在一起，每一件物品如视频、音频，称之为轨道(track) 每个轨道，都有自己的格式（媒体格式&#x2F;编码方式） 就比如平常所说的视频H.264 音频是AAC  常见封装格式1.MP4MP4即MPEG">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://s1.ax1x.com/2020/07/08/UEOMwR.md.png">
 <meta property="article:published_time" content="2020-06-07T02:44:31.000Z">
-<meta property="article:modified_time" content="2020-10-05T07:36:00.761Z">
+<meta property="article:modified_time" content="2021-02-20T08:49:38.950Z">
 <meta property="article:author" content="Cerium">
 <meta property="article:tag" content="科普">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://s1.ax1x.com/2020/07/08/UEOMwR.md.png">
 
 
     
@@ -52,10 +64,19 @@
  
 
 
+    
+<link rel="stylesheet" href="/css/style/dark.css">
+
+    
+<script src="/js/darkmode.js"></script>
+
+
 
     
     
         <link rel="stylesheet" id="hl-default-theme" href="/css/highlight/default.css" media="none" onload="if(getComputedStyle(document.documentElement).getPropertyValue('--color-mode').indexOf('dark')===-1)this.media='all'">
+        
+            <link rel="stylesheet" id="hl-dark-theme" href="/css/highlight/dark.css" media="none" onload="if(getComputedStyle(document.documentElement).getPropertyValue('--color-mode').indexOf('dark')!==-1)this.media='all'">
         
     
 
@@ -76,34 +97,22 @@
             <header class="header">
     <div class="header__left">
         <a href="/" class="button">
-            <span class="logo__text">
-                PH&#39;s Blog
-            </span>
+            <span class="logo__text">PH&#39;s Blog</span>
         </a>
     </div>
     <div class="header__right">
         
             <div class="navbar__menus">
                 
-                    <a href="/" class="navbar-menu button">
-                        首页
-                    </a>
+                    <a href="/" class="navbar-menu button">首页</a>
                 
-                    <a href="/tags/" class="navbar-menu button">
-                        标签
-                    </a>
+                    <a href="/tags/" class="navbar-menu button">标签</a>
                 
-                    <a href="/archives/" class="navbar-menu button">
-                        归档
-                    </a>
+                    <a href="/archives/" class="navbar-menu button">归档</a>
                 
-                    <a href="/friends/" class="navbar-menu button">
-                        友链
-                    </a>
+                    <a href="/friends/" class="navbar-menu button">友链</a>
                 
-                    <a href="/diary/" class="navbar-menu button">
-                        开发日记
-                    </a>
+                    <a href="/diary/" class="navbar-menu button">开发日记</a>
                 
             </div>
         
@@ -116,6 +125,10 @@
 
         
         
+    <a href="javaScript:void(0);" id="btn-toggle-dark">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+    </a>
+
 
          
     <a href="#" class="button" id="b2t" aria-label="回到顶部" title="回到顶部">
@@ -126,32 +139,18 @@
 
 
         
-            <a class="dropdown-icon button" id="btn-dropdown">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width='24' height='24' fill="none" stroke="currentColor" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round">
-                    <path fill="currentColor" d="M3.314,4.8h13.372c0.41,0,0.743-0.333,0.743-0.743c0-0.41-0.333-0.743-0.743-0.743H3.314c-0.41,0-0.743,0.333-0.743,0.743C2.571,4.467,2.904,4.8,3.314,4.8z M16.686,15.2H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,15.2,16.686,15.2z M16.686,9.257H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,9.257,16.686,9.257z"></path>
-                </svg>
-            </a>
+            <a class="dropdown-icon button" id="btn-dropdown" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width='24' height='24' fill="none" stroke="currentColor" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round"><path fill="currentColor" d="M3.314,4.8h13.372c0.41,0,0.743-0.333,0.743-0.743c0-0.41-0.333-0.743-0.743-0.743H3.314c-0.41,0-0.743,0.333-0.743,0.743C2.571,4.467,2.904,4.8,3.314,4.8z M16.686,15.2H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,15.2,16.686,15.2z M16.686,9.257H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,9.257,16.686,9.257z"></path></svg></a>
             <div class="dropdown-menus" id="dropdown-menus">
                 
-                    <a href="/" class="dropdown-menu button">
-                        首页
-                    </a>
+                    <a href="/" class="dropdown-menu button">首页</a>
                 
-                    <a href="/tags/" class="dropdown-menu button">
-                        标签
-                    </a>
+                    <a href="/tags/" class="dropdown-menu button">标签</a>
                 
-                    <a href="/archives/" class="dropdown-menu button">
-                        归档
-                    </a>
+                    <a href="/archives/" class="dropdown-menu button">归档</a>
                 
-                    <a href="/friends/" class="dropdown-menu button">
-                        友链
-                    </a>
+                    <a href="/friends/" class="dropdown-menu button">友链</a>
                 
-                    <a href="/diary/" class="dropdown-menu button">
-                        开发日记
-                    </a>
+                    <a href="/diary/" class="dropdown-menu button">开发日记</a>
                 
             </div>
         
@@ -167,9 +166,7 @@
         关于视频格式的一些知识
     </h1>
     <div class="post-title__meta">
-        <a href="/archives/2020/06/" class="post-meta__date button">
-    2020-06-07
-</a>
+        <a href="/archives/2020/06/" class="post-meta__date button">2020-06-07</a>
         
     <span class="separate-dot"></span><a href="/categories/%E7%AC%94%E8%AE%B0/" class="button">笔记</a>
 
@@ -191,7 +188,7 @@
             <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#封装格式-and-媒体格式-编码方式"><span class="toc-text">封装格式 and 媒体格式&#x2F;编码方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#常见封装格式"><span class="toc-text">常见封装格式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-MP4"><span class="toc-text">1.MP4</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#H-264的Profile和Level"><span class="toc-text">H.264的Profile和Level</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#HEVC-H-265（比起H-264更为强悍的编码方式）"><span class="toc-text">HEVC&#x2F;H.265（比起H.264更为强悍的编码方式）</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-MKV"><span class="toc-text">2.MKV</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-FLV-全称Flash-Video-网络传输最广的格式"><span class="toc-text">3.FLV 全称Flash Video 网络传输最广的格式</span></a></li></ol></li></ol>
         </div>
     </aside>
-    <a class="btn-toc button" id="btn-toc">
+    <a class="btn-toc button" id="btn-toc" tabindex="0">
         <svg viewBox="0 0 1024 1024" width="32" height="32" xmlns="http://www.w3.org/2000/svg">
             <path d="M128 256h64V192H128zM320 256h576V192H320zM128 544h64v-64H128zM320 544h576v-64H320zM128 832h64v-64H128zM320 832h576v-64H320z" fill="currentColor"></path>
         </svg>
@@ -203,18 +200,14 @@
 
 
 <article class="post content-card">
-    <div class="post__header">
-    
-        <div class="post-thumbnail lazyload" data-bg="https://s1.ax1x.com/2020/07/08/UEOMwR.md.png"></div>
-    
-</div>
+    <div class="post__header"></div>
     <div class="post__content">
         <a id="more"></a>
 
-    <div id="aplayer-qQeSRPcv" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="28152549" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div>
+    <div id="aplayer-BLilDzpL" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="28152549" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div>
 <blockquote>
 <p> 部分参考：</p>
-<p> <a href="https://www.bilibili.com/video/BV17x411N71u" target="_blank" rel="noopener">柏听支醉</a>        <a href="https://vcb-s.com/archives/2726" target="_blank" rel="noopener">VCB</a></p>
+<p> <a href="https://www.bilibili.com/video/BV17x411N71u" target="_blank" rel="noopener">柏听支醉</a>        <a href="https://vcb-s.com/archives/2726" target="_blank" rel="noopener">VCB-Studio</a></p>
 </blockquote>
 <h3 id="封装格式-and-媒体格式-编码方式"><a href="#封装格式-and-媒体格式-编码方式" class="headerlink" title="封装格式 and 媒体格式/编码方式"></a>封装格式 and 媒体格式/编码方式</h3><p>一个视频，包括画面、音频、章节，有时候还有字幕 这时就需要一个“容器”（封装格式）将它们打包在一起，每一件物品如视频、音频，称之为轨道(track) 每个轨道，都有自己的格式（媒体格式/编码方式） 就比如平常所说的视频H.264 音频是AAC</p>
 <hr>
@@ -231,19 +224,8 @@
 
     </div>
      
-    <div class="post-footer__meta">
-    <p>
-        更新于 2020-10-05
-    </p>
-</div> 
-    <div class="post-meta__cats">
-    
-        <a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-cats__link button">笔记</a>
-    
-    
-        <a href="/tags/%E7%A7%91%E6%99%AE/" class="post-tags__link button"># 科普</a>
-    
-</div> 
+    <div class="post-footer__meta"><p>更新于 2021-02-20</p></div> 
+    <div class="post-meta__cats"><a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-cats__link button">笔记</a><a href="/tags/%E7%A7%91%E6%99%AE/" class="post-tags__link button"># 科普</a></div> 
 </article>
 
 
@@ -348,7 +330,7 @@
 
     <script>
         let lazyloadT = Boolean('true'),
-            auto_fancybox = Boolean('true')
+            auto_fancybox = Boolean('false')
         if (auto_fancybox) {
             $(".post__content").find('img').each(function () {
                 var element = document.createElement("a");
@@ -375,17 +357,8 @@
 
  
 
+ 
 
-    <script>
-        window.onload = () => {
-            document.querySelectorAll('.sliding-fold').forEach((item) => {
-                item.querySelector('summary').onclick = () => {
-                    item.classList.toggle("collapsed");
-                    item.classList.toggle("expanded");
-                };
-            });
-        };
-    </script>
  
 
 
