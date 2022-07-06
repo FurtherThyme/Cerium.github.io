@@ -63,7 +63,18 @@
 <link rel="stylesheet" href="/css/style/main.css">
  
 
+    
+    
+        <link rel="stylesheet" id="hl-default-theme" href="/css/highlight/default.css" media="none" >
+        
+            <link rel="stylesheet" id="hl-dark-theme" href="/css/highlight/dark.css" media="none">
+        
+    
 
+    
+    
+
+    
     
 <link rel="stylesheet" href="/css/style/dark.css">
 
@@ -71,17 +82,6 @@
 <script src="/js/darkmode.js"></script>
 
 
-
-    
-    
-        <link rel="stylesheet" id="hl-default-theme" href="/css/highlight/default.css" media="none" onload="if(getComputedStyle(document.documentElement).getPropertyValue('--color-mode').indexOf('dark')===-1)this.media='all'">
-        
-            <link rel="stylesheet" id="hl-dark-theme" href="/css/highlight/dark.css" media="none" onload="if(getComputedStyle(document.documentElement).getPropertyValue('--color-mode').indexOf('dark')!==-1)this.media='all'">
-        
-    
-
-    
-    
 
      
 
@@ -97,7 +97,7 @@
             <header class="header">
     <div class="header__left">
         <a href="/" class="button">
-            <span class="logo__text">PH&#39;s Blog</span>
+            <span class="logo__text">Cerium</span>
         </a>
     </div>
     <div class="header__right">
@@ -127,14 +127,6 @@
         
     <a href="javaScript:void(0);" id="btn-toggle-dark">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-    </a>
-
-
-         
-    <a href="#" class="button" id="b2t" aria-label="回到顶部" title="回到顶部">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="32" height="32">
-            <path d="M233.376 722.752L278.624 768 512 534.624 745.376 768l45.248-45.248L512 444.128zM192 352h640V288H192z" fill="currentColor"></path>
-        </svg>
     </a>
 
 
@@ -185,7 +177,7 @@
 
     <aside class="post-side">
         <div class="post-side__toc">
-            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#封装格式-and-媒体格式-编码方式"><span class="toc-number">1.</span> <span class="toc-text">封装格式 and 媒体格式&#x2F;编码方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#常见封装格式"><span class="toc-number">2.</span> <span class="toc-text">常见封装格式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-MP4"><span class="toc-number">2.1.</span> <span class="toc-text">1.MP4</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#H-264的Profile和Level"><span class="toc-number">2.1.1.</span> <span class="toc-text">H.264的Profile和Level</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#HEVC-H-265（比起H-264更为强悍的编码方式）"><span class="toc-number">2.1.2.</span> <span class="toc-text">HEVC&#x2F;H.265（比起H.264更为强悍的编码方式）</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-MKV"><span class="toc-number">2.2.</span> <span class="toc-text">2.MKV</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-FLV-全称Flash-Video-网络传输最广的格式"><span class="toc-number">2.3.</span> <span class="toc-text">3.FLV 全称Flash Video 网络传输最广的格式</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#封装格式-and-媒体格式-编码方式"><span class="toc-text">封装格式 and 媒体格式&#x2F;编码方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#常见封装格式"><span class="toc-text">常见封装格式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-MP4"><span class="toc-text">1.MP4</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#H-264的Profile和Level"><span class="toc-text">H.264的Profile和Level</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#HEVC-H-265（比起H-264更为强悍的编码方式）"><span class="toc-text">HEVC&#x2F;H.265（比起H.264更为强悍的编码方式）</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-MKV"><span class="toc-text">2.MKV</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-FLV-全称Flash-Video-网络传输最广的格式"><span class="toc-text">3.FLV 全称Flash Video 网络传输最广的格式</span></a></li></ol></li></ol>
         </div>
     </aside>
     <a class="btn-toc button" id="btn-toc" tabindex="0">
@@ -195,16 +187,16 @@
     </a>
     <div class="toc-menus" id="toc-menus">
         <div class="toc-title">文章目录</div>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#封装格式-and-媒体格式-编码方式"><span class="toc-number">1.</span> <span class="toc-text">封装格式 and 媒体格式&#x2F;编码方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#常见封装格式"><span class="toc-number">2.</span> <span class="toc-text">常见封装格式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-MP4"><span class="toc-number">2.1.</span> <span class="toc-text">1.MP4</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#H-264的Profile和Level"><span class="toc-number">2.1.1.</span> <span class="toc-text">H.264的Profile和Level</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#HEVC-H-265（比起H-264更为强悍的编码方式）"><span class="toc-number">2.1.2.</span> <span class="toc-text">HEVC&#x2F;H.265（比起H.264更为强悍的编码方式）</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-MKV"><span class="toc-number">2.2.</span> <span class="toc-text">2.MKV</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-FLV-全称Flash-Video-网络传输最广的格式"><span class="toc-number">2.3.</span> <span class="toc-text">3.FLV 全称Flash Video 网络传输最广的格式</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#封装格式-and-媒体格式-编码方式"><span class="toc-text">封装格式 and 媒体格式&#x2F;编码方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#常见封装格式"><span class="toc-text">常见封装格式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-MP4"><span class="toc-text">1.MP4</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#H-264的Profile和Level"><span class="toc-text">H.264的Profile和Level</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#HEVC-H-265（比起H-264更为强悍的编码方式）"><span class="toc-text">HEVC&#x2F;H.265（比起H.264更为强悍的编码方式）</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-MKV"><span class="toc-text">2.MKV</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-FLV-全称Flash-Video-网络传输最广的格式"><span class="toc-text">3.FLV 全称Flash Video 网络传输最广的格式</span></a></li></ol></li></ol>
     </div>
 
 
-<article class="post content-card">
+<article class="post post__with-toc content-card">
     <div class="post__header"></div>
     <div class="post__content">
         <a id="more"></a>
 
-    <div id="aplayer-XErdxxuJ" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="28152549" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div>
+    <div id="aplayer-TttsxzUr" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="28152549" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#ad7a86"></div>
 <blockquote>
 <p> 部分参考：</p>
 <p> <a href="https://www.bilibili.com/video/BV17x411N71u" target="_blank" rel="noopener">柏听支醉</a>        <a href="https://vcb-s.com/archives/2726" target="_blank" rel="noopener">VCB-Studio</a></p>
@@ -227,7 +219,7 @@
     </div>
      
     <div class="post-footer__meta"><p>更新于 2021-03-03</p></div> 
-    <div class="post-meta__cats"><a href="/categories/%E7%AC%94%E8%AE%B0/" class="post-cats__link button">笔记</a><a href="/tags/%E7%A7%91%E6%99%AE/" class="post-tags__link button"># 科普</a></div> 
+    <div class="post-entry__tags"><a href="/tags/%E7%A7%91%E6%99%AE/" class="post-tags__link button"># 科普</a></div> 
 </article>
 
 
@@ -275,6 +267,13 @@
 </main>
 
             <footer class="footer">
+     
+    <a href="#" class="button" id="b2t" aria-label="回到顶部" title="回到顶部">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="32" height="32">
+            <path d="M233.376 722.752L278.624 768 512 534.624 745.376 768l45.248-45.248L512 444.128zM192 352h640V288H192z" fill="currentColor"></path>
+        </svg>
+    </a>
+
     
 
 
@@ -286,7 +285,7 @@
     
         
         <p class="footer-copyright">
-            Copyright © 2020&nbsp;-&nbsp;2021 <a href="/">PH&#39;s Blog</a>
+            Copyright © 2020&nbsp;-&nbsp;2022 <a href="/">PH&#39;s Blog</a>
         </p>
     
     
@@ -310,7 +309,11 @@
 
  
 
-  
+ 
+
+
+
+ 
 
 
 
@@ -355,6 +358,8 @@
             });
         }
     </script>
+ 
+
  
 
  
